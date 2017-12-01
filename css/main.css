@@ -1,0 +1,281 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.fixingWidth{
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.hidden{
+	display: hidden;
+}
+
+
+.pracAreas{
+	padding: 20px;
+	margin: 10px;
+    list-style-type: square;
+}
+.pracAreas li{
+    padding: 10px;
+    color: lightblue;
+    font-size: 3rem;
+
+}
+
+.tooltip1{
+    color: black;
+}
+.pracAreas li span{
+    font-size: 14pt;
+}
+.pracAreas li p{
+    padding-top: 20px;
+    color: black;
+    font-size: 10pt;
+}
+
+.logo{
+	width: 30px;
+}
+.logoMed{
+    width: 150px;
+}
+
+.atPhoto{
+	padding: 20px;
+}
+
+
+.tooltip1 {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip1 .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+
+.tooltip1:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.fixTop{
+    margin: auto;
+    margin-top: 100px;
+    padding: 10px;
+}
+.headerCont{
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 2px 1px #000;
+    margin-top: 200px;
+    background: rgba(25,25,140, 0.4);
+    height: 700px;
+
+}
+.alignCenter{
+    
+    text-align: center;
+    
+}
+.buttonFixTop{
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    background: rgba(0,0,0, 1);
+    color: white;
+    text-align: center;
+
+}
+.buttonFixTop:hover{
+    background-color: #808080;
+}
+
+.largeTopMargin{
+    margin-top: 150px;
+
+}
+.largeBottomMargin{
+    margin-bottom: 150px;
+}
+
+.medTopMargin{
+    margin-top: 75px;
+
+}
+.medBottomMargin{
+    margin-bottom: 75px;
+}
+
+.paralaxPic{
+/* The image used */
+background-image: url("../img/timp.jpg");
+
+/* Set a specific height */
+height: 1200px; 
+width: 100%;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+.paralaxPic2{
+/* The image used */
+background-image: url("../img/gods.jpg");
+
+/* Set a specific height */
+height: 2200px; 
+width: 100%;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+color: white;
+
+}
+.paralaxPic3{
+/* The image used */
+background-image: url("../img/invLaw.jpg");
+
+/* Set a specific height */
+height: 1100px; 
+width: 100%;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+color: white;
+
+}
+
+/*Phone */
+@media only screen and (max-width:459px){
+    .paralaxPic{
+
+    /* Set a specific height */
+    height: 1200px; 
+    width: 100%;
+
+    }
+    .paralaxPic2{
+
+    /* Set a specific height */
+    height: 2200px; 
+    width: 100%;
+
+    }
+    .paralaxPic3{
+
+    height: 1100px; 
+    width: 100%;
+    }
+}
+/*Tablet */
+@media only screen and (min-width: 460px) and (max-width:991px){
+    .paralaxPic{
+    /* Set a specific height */
+    height: 1200px; 
+    width: 100%;
+
+
+    }
+    .paralaxPic2{
+/* The image used */
+
+    height: 1500px; 
+    width: 100%;
+
+    }
+    .paralaxPic3{
+/* The image used */
+
+    height: 1100px; 
+    width: 100%;
+
+    }
+}
+
+/*Desktop */
+@media only screen and (min-width:992px){
+    .paralaxPic{
+    /* Set a specific height */
+    height: 1200px; 
+    width: 100%;
+
+    }
+    .paralaxPic2{
+    /* Set a specific height */
+    height: 990px; 
+    width: 100%;
+
+
+    }
+    .paralaxPic3{
+    height: 550px; 
+    width: 100%;
+    }
+
+}
+
+.addShadow{
+    text-shadow: 3px .5px #000;
+     
+}
+.ourFirmBackground{
+    background: rgba(105,105,105, 0.7);
+    font-size: 20px;
+}
+.titleCard{
+    font-size: 60px;
+}
+.getDirections{
+    margin-top: 10px;
+    margin-left: 30%;
+}
+.subButton{
+    margin-left: 40%;
+}
+.gMap iframe{
+    height: 300px;
+}
+
+.navbar-left li a{
+    font-size: 18pt;
+    padding: 15px;
+}
