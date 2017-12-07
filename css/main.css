@@ -151,7 +151,7 @@ background-size: cover;
 }
 .paralaxPic2{
 /* The image used */
-background-image: url("../img/gods.jpg");
+background-image: url("../img/sAway.jpg");
 
 /* Create the parallax scrolling effect */
 background-attachment: fixed;
@@ -233,13 +233,13 @@ color: white;
 @media only screen and (min-width:992px){
     .paralaxPic{
     /* Set a specific height */
-    height: 700px; 
+    height: 1000px; 
     width: 100%;
 
     }
     .paralaxPic2{
     /* Set a specific height */
-    height: 700px; 
+    height: 1000px; 
     width: 100%;
 
 
@@ -280,4 +280,10 @@ color: white;
 }
 .glyphPrevWork{
     font-size: 30px;
+}
+.aboutMe{
+    font-size: 20px;
+}
+.previousWork{
+    font-size: 16px;
 }
