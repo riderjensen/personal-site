@@ -62,10 +62,12 @@ body{
 
 .tooltip1 .tooltiptext {
     visibility: hidden;
-    width: 120px;
-    background-color: black;
+    width: 200px;
+    background-color: lightgray;
     color: #fff;
     text-align: center;
+
+    border-width: 1px;
     border-radius: 6px;
     padding: 5px 0;
     position: absolute;
@@ -95,7 +97,6 @@ body{
     color: rgba(255, 255, 255, 1);
     text-shadow: 2px 1px #000;
     margin-top: 200px;
-    background: rgba(25,25,140, 0.4);
     height: 700px;
 
 }
@@ -140,9 +141,6 @@ body{
 /* The image used */
 background-image: url("../img/timp.jpg");
 
-/* Set a specific height */
-height: 1200px; 
-width: 100%;
 
 /* Create the parallax scrolling effect */
 background-attachment: fixed;
@@ -154,10 +152,6 @@ background-size: cover;
 .paralaxPic2{
 /* The image used */
 background-image: url("../img/gods.jpg");
-
-/* Set a specific height */
-height: 2200px; 
-width: 100%;
 
 /* Create the parallax scrolling effect */
 background-attachment: fixed;
@@ -171,9 +165,6 @@ color: white;
 /* The image used */
 background-image: url("../img/invLaw.jpg");
 
-/* Set a specific height */
-height: 1100px; 
-width: 100%;
 
 /* Create the parallax scrolling effect */
 background-attachment: fixed;
@@ -189,14 +180,14 @@ color: white;
     .paralaxPic{
 
     /* Set a specific height */
-    height: 1200px; 
+    height: 800px; 
     width: 100%;
 
     }
     .paralaxPic2{
 
     /* Set a specific height */
-    height: 2200px; 
+    height: 1275px; 
     width: 100%;
 
     }
@@ -205,12 +196,19 @@ color: white;
     height: 1100px; 
     width: 100%;
     }
+    .headerCont{
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 2px 1px #000;
+    margin-top: 50px;
+    height: 700px;
+
+}
 }
 /*Tablet */
 @media only screen and (min-width: 460px) and (max-width:991px){
     .paralaxPic{
     /* Set a specific height */
-    height: 1200px; 
+    height: 850px; 
     width: 100%;
 
 
@@ -218,7 +216,7 @@ color: white;
     .paralaxPic2{
 /* The image used */
 
-    height: 1500px; 
+    height: 900px; 
     width: 100%;
 
     }
@@ -235,13 +233,13 @@ color: white;
 @media only screen and (min-width:992px){
     .paralaxPic{
     /* Set a specific height */
-    height: 1200px; 
+    height: 700px; 
     width: 100%;
 
     }
     .paralaxPic2{
     /* Set a specific height */
-    height: 990px; 
+    height: 700px; 
     width: 100%;
 
 
@@ -258,8 +256,8 @@ color: white;
      
 }
 .ourFirmBackground{
-    background: rgba(105,105,105, 0.7);
-    font-size: 20px;
+ 
+    font-size: 15px;
 }
 .titleCard{
     font-size: 60px;
@@ -276,6 +274,10 @@ color: white;
 }
 
 .navbar-left li a{
-    font-size: 18pt;
-    padding: 15px;
+    margin-top: 10px;
+    font-size: 14pt;
+    padding: 10px;
+}
+.glyphPrevWork{
+    font-size: 30px;
 }

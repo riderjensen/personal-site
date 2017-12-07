@@ -151,6 +151,16 @@ if ($continue != "/") {
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109492570-3"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-109492570-3');
+        </script>
+
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         
 
@@ -167,8 +177,6 @@ if ($continue != "/") {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html"><img class="logo" src="img/noWords.png"></a>
-          <a class="navbar-brand" href="index.html"><img  class="logo" src="img/logo.png"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -178,30 +186,33 @@ if ($continue != "/") {
             <li><a id="greetingMessage" href="#"></a></li>
           </ul>
           <ul class="nav navbar-nav navbar-left">
-            <li><a href="#practice">Skill Set</a></li>
+            <li><a href="riderjensen.com"><img class="logo" src="img/logoInvert.png"></a></li>
             </li>
-            <li><a href="#people">Mission Statement</a></li>
+            <li><a href="http://riderjensen.com/#practice">Skills</a></li>
             </li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="http://riderjensen.com/#people">About</a></li>
+            </li>
+            <li><a href="http://riderjensen.com/#prevWork">Work</a></li>
+            </li>
+            <li><a href="http://riderjensen.com/#contact">Contact</a></li>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://www.facebook.com/notocarrider" target="_blank"><img class="logo" src="img/Facebook.png"></a>
+            <li><a href="https://www.facebook.com/notocarrider" target="_blank"><img class="logo" src="img/facebook.svg"></a>
             </li>
-            <li><a href="https://www.linkedin.com/in/rider-jensen-a168a2102/" target="_blank"><img class="logo" src="img/Linked.png"></a>
+            <li><a href="https://www.linkedin.com/in/rider-jensen-a168a2102/" target="_blank"><img class="logo" src="img/linkedin.svg"></a>
             </li>
-            <li><a href="https://twitter.com/RiderJensen1" target="_blank"><img class="logo" src="img/Twit.png"></a>
+            <li><a href="https://twitter.com/RiderJensen1" target="_blank"><img class="logo" src="img/twitter.svg"></a>
             </li>
-            <li><a href="https://medium.com/@riderjensen1" target="_blank"><img class="logo" src="img/Medium.png"></a>
+            <li><a href="https://medium.com/@riderjensen1" target="_blank"><img class="logo" src="img/medium.svg"></a>
             </li>
-            <li><a href="https://github.com/riderjensen" target="_blank"><img class="logo" src="img/github.png"></a>
+            <li><a href="https://github.com/riderjensen" target="_blank"><img class="logo" src="img/github.svg"></a>
             </li>
 
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-
     
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
