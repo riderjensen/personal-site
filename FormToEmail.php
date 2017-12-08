@@ -147,20 +147,13 @@ if ($continue != "/") {
         <title>Rider Jensen Creations</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="refresh" content="10; url=http://riderjensen.com/" />
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109492570-3"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'UA-109492570-3');
-        </script>
-
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         
 
@@ -177,6 +170,7 @@ if ($continue != "/") {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          <a class="navbar-brand" href="http://riderjensen.com/#top"><img class="logo" src="img/logoInvert.png"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -186,8 +180,6 @@ if ($continue != "/") {
             <li><a id="greetingMessage" href="#"></a></li>
           </ul>
           <ul class="nav navbar-nav navbar-left">
-            <li><a href="riderjensen.com"><img class="logo" src="img/logoInvert.png"></a></li>
-            </li>
             <li><a href="http://riderjensen.com/#practice">Skills</a></li>
             </li>
             <li><a href="http://riderjensen.com/#people">About</a></li>
