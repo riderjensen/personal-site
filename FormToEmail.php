@@ -62,6 +62,8 @@ if(!(isset($_SERVER['HTTP_REFERER']) && !empty($_SERVER['HTTP_REFERER']) && stri
 
 // Check for a blank form.
 
+if(!empty($_POST['website'])) die();
+
 function recursive_array_check_blank($element_value)
 {
 
