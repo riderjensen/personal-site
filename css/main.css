@@ -173,7 +173,6 @@ color: white;
     }
     .headerCont{
     color: rgba(255, 255, 255, 1);
-    text-shadow: 2px 1px #000;
     margin-top: 50px;
     height: 700px;
     }
@@ -199,7 +198,7 @@ color: white;
      .paralaxPic2{
 /* The image used */
 
-    height: 1100px; 
+    height: 1300px; 
     width: 100%;
 
     }
