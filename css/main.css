@@ -25,17 +25,10 @@ body{
 }
 .pracAreas li{
     padding: 10px;
-    color: lightblue;
     font-size: 3rem;
 
 }
 
-.tooltip1{
-    color: black;
-}
-.pracAreas li span{
-    font-size: 14pt;
-}
 .pracAreas li p{
     padding-top: 20px;
     color: black;
@@ -43,7 +36,7 @@ body{
 }
 
 .logo{
-	width: 30px;
+	width: 25px;
 }
 .logoMed{
     width: 150px;
@@ -54,40 +47,6 @@ body{
 }
 
 
-.tooltip1 {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-}
-
-.tooltip1 .tooltiptext {
-    visibility: hidden;
-    width: 200px;
-    background-color: lightgray;
-    color: #fff;
-    text-align: center;
-
-    border-width: 1px;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-    
-    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
-    opacity: 0;
-    transition: opacity 1s;
-}
-
-
-.tooltip1:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
-
-
 .fixTop{
     margin: auto;
     margin-top: 100px;
@@ -95,15 +54,16 @@ body{
 }
 .headerCont{
     color: rgba(255, 255, 255, 1);
-    text-shadow: 2px 1px #000;
+    text-shadow: 2px 1px #fff;
     margin-top: 200px;
     height: 700px;
 
 }
+.darkText{
+    color: black;
+}
 .alignCenter{
-    
     text-align: center;
-    
 }
 .buttonFixTop{
     display: block;
@@ -115,7 +75,6 @@ body{
     background: rgba(0,0,0, 1);
     color: white;
     text-align: center;
-
 }
 .buttonFixTop:hover{
     background-color: #808080;
@@ -136,6 +95,19 @@ body{
 .medBottomMargin{
     margin-bottom: 75px;
 }
+.socialConnection{
+    margin-top: 35px;
+}
+.regMargBot{
+    margin-bottom: 50px;
+}
+.regMargTop{
+    margin-top: 50px;
+}
+.specMarg{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
 
 .paralaxPic{
 /* The image used */
@@ -149,6 +121,7 @@ background-repeat: no-repeat;
 background-size: cover;
 
 }
+
 .paralaxPic2{
 /* The image used */
 background-image: url("../img/sAway.jpg");
@@ -174,11 +147,13 @@ background-size: cover;
 color: white;
 
 }
+.social{
+    background-color: #F5F5F5;
+}
 
 /*Phone */
 @media only screen and (max-width:459px){
     .paralaxPic{
-
     /* Set a specific height */
     height: 800px; 
     width: 100%;
@@ -193,7 +168,7 @@ color: white;
     }
     .paralaxPic3{
 
-    height: 1100px; 
+    height: 700px; 
     width: 100%;
     }
     .headerCont{
@@ -201,8 +176,18 @@ color: white;
     text-shadow: 2px 1px #000;
     margin-top: 50px;
     height: 700px;
-
-}
+    }
+    .specMarg{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    }
+    .altMarginOne{
+        margin-top: 100px;
+    }
+    .altMarginTwo{
+        margin-bottom: 100px;
+    }
+    
 }
 /*Tablet */
 @media only screen and (min-width: 460px) and (max-width:991px){
@@ -210,10 +195,8 @@ color: white;
     /* Set a specific height */
     height: 850px; 
     width: 100%;
-
-
     }
-    .paralaxPic2{
+     .paralaxPic2{
 /* The image used */
 
     height: 1100px; 
@@ -221,11 +204,18 @@ color: white;
 
     }
     .paralaxPic3{
-/* The image used */
-
-    height: 1100px; 
+    height: 700px; 
     width: 100%;
-
+    }
+    .specMarg{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    }
+    .altMarginOne{
+        margin-top: 100px;
+    }
+    .altMarginTwo{
+        margin-bottom: 100px;
     }
 }
 
@@ -237,7 +227,7 @@ color: white;
     width: 100%;
 
     }
-    .paralaxPic2{
+        .paralaxPic2{
     /* Set a specific height */
     height: 1000px; 
     width: 100%;
@@ -250,27 +240,26 @@ color: white;
     }
 
 }
-
-.addShadow{
-    text-shadow: 3px .5px #000;
-     
-}
 .ourFirmBackground{
- 
     font-size: 15px;
 }
 .titleCard{
     font-size: 60px;
 }
-.getDirections{
-    margin-top: 10px;
-    margin-left: 30%;
-}
+
 .subButton{
-    margin-left: 40%;
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    background: rgba(0,0,0, 1);
+    color: white;
+    text-align: center;
 }
-.gMap iframe{
-    height: 300px;
+.subButton:hover{
+    background-color: #808080;
 }
 
 .navbar-left li a{
@@ -282,7 +271,8 @@ color: white;
     font-size: 30px;
 }
 .aboutMe{
-    font-size: 20px;
+    font-size: 18px;
+    text-shadow: 2px 1px #000;
 }
 .previousWork{
     font-size: 16px;
@@ -292,4 +282,16 @@ form #website{
 }
 .website{
     display: none;
+}
+.socMedIcon{
+    width: 40px;
+}
+.aboutMeHeading{
+    text-shadow: 2px 1px #000;
+}
+.control-label{
+    color: #000;
+}
+#contactHeading{
+    color: #000;
 }

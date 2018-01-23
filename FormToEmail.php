@@ -63,6 +63,7 @@ if(!(isset($_SERVER['HTTP_REFERER']) && !empty($_SERVER['HTTP_REFERER']) && stri
 // Check for a blank form.
 
 if(!empty($_POST['website'])) die();
+if(!empty($_POST['email'])) die();
 
 function recursive_array_check_blank($element_value)
 {
@@ -162,7 +163,7 @@ if ($continue != "/") {
     </head>
     <body>
 
-   <nav class="navbar navbar-inverse navbar-default navbar-fixed-top" data-spy="affix">
+   <nav class="navbar navbar-default navbar-fixed-top" data-spy="affix">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -172,7 +173,7 @@ if ($continue != "/") {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="http://riderjensen.com/#top"><img class="logo" src="img/logoInvert.png"></a>
+          <a class="navbar-brand" href="http://riderjensen.com/#top"><img class="logo" src="img/logo.png"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -182,27 +183,16 @@ if ($continue != "/") {
             <li><a id="greetingMessage" href="#"></a></li>
           </ul>
           <ul class="nav navbar-nav navbar-left">
-            <li><a href="http://riderjensen.com/#practice">Skills</a></li>
+            <li><a href="http://riderjensen.com/#prevWork">Work</a></li>
             </li>
             <li><a href="http://riderjensen.com/#people">About</a></li>
             </li>
-            <li><a href="http://riderjensen.com/#prevWork">Work</a></li>
+            <li><a href="http://riderjensen.com/#practice">Skills</a></li>
             </li>
             <li><a href="http://riderjensen.com/#contact">Contact</a></li>
             </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://www.facebook.com/notocarrider" target="_blank"><img class="logo" src="img/facebook.svg"></a>
+            <li><a href="http://riderjensen.com/#socialMed">Social Media</a></li>
             </li>
-            <li><a href="https://www.linkedin.com/in/rider-jensen-a168a2102/" target="_blank"><img class="logo" src="img/linkedin.svg"></a>
-            </li>
-            <li><a href="https://twitter.com/RiderJensen1" target="_blank"><img class="logo" src="img/twitter.svg"></a>
-            </li>
-            <li><a href="https://medium.com/@riderjensen1" target="_blank"><img class="logo" src="img/medium.svg"></a>
-            </li>
-            <li><a href="https://github.com/riderjensen" target="_blank"><img class="logo" src="img/github.svg"></a>
-            </li>
-
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -214,7 +204,6 @@ if ($continue != "/") {
         <br>
         <h1>Confirmation</h1>
         <p>Your message is on its way! You should be contacted shortly. Thank you for choosing Rider Jensen Creations. </p>
-        <p>This email was transferred using <a href="http://FormToEmail.com">FormToEmail.com</a></p>
       </div>
     </div>
 
@@ -224,7 +213,33 @@ if ($continue != "/") {
         <p>Redirecting in 10 seconds...</p>
       </div>
 
-  
+   <div class="container-fluid social">
+  <div class="container">
+    <div class="row regMargBot regMargTop">
+      <div class="col-md-12 alignCenter">
+        <h1 class="headingColor">Social</h1>
+      </div>
+    </div>
+    <div class="row regMargBot">
+      <div class="col-md-3 col-sm-6 alignCenter">
+        <a href="https://github.com/riderjensen" target="_blank"><img class="socMedIcon" src="img/github.svg"></a>
+        <p class="socialConnection">Connect with me on GitHub and see what current projects I am working on</p>
+      </div>
+      <div class="col-md-3 col-sm-6 alignCenter">
+        <a href="https://twitter.com/RiderJensen1" target="_blank"><img class="socMedIcon" src="img/twitter.svg"></a>
+        <p class="socialConnection">Connect with me on Twitter and see what I am saying about the industry</p>
+      </div>
+      <div class="col-md-3 col-sm-6 alignCenter">
+        <a href="https://medium.com/@riderjensen1" target="_blank"><img class="socMedIcon" src="img/medium.svg"></a>
+        <p class="socialConnection">Connect with me on Medium and see what I am writing about the industry</p>
+      </div>
+      <div class="col-md-3 col-sm-6 alignCenter">
+        <a href="https://www.linkedin.com/in/rider-jensen-a168a2102/" target="_blank"><img class="socMedIcon" src="img/linkedin.svg"></a>
+        <p class="socialConnection">Connect with me on LinkedIn to see my work experience and what skills I have</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
    <div class="container">
