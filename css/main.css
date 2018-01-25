@@ -9,18 +9,18 @@ body{
 }
 
 .fixingWidth{
-	margin-left: 5%;
-	margin-right: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .hidden{
-	display: hidden;
+    display: hidden;
 }
 
 
 .pracAreas{
-	padding: 20px;
-	margin: 10px;
+    padding: 20px;
+    margin: 10px;
     list-style-type: square;
 }
 .pracAreas li{
@@ -36,14 +36,14 @@ body{
 }
 
 .logo{
-	width: 25px;
+    width: 25px;
 }
 .logoMed{
     width: 150px;
 }
 
 .atPhoto{
-	padding: 20px;
+    padding: 20px;
 }
 
 
@@ -293,4 +293,10 @@ form #website{
 }
 #contactHeading{
     color: #000;
+}
+.orderedList li a{
+    color: white;
+}
+.navbar-default{
+    opacity: 0;
 }

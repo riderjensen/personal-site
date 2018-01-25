@@ -11,7 +11,7 @@ SETUP INSTRUCTIONS
 Enter your email address. Enter the email address below to send the contents of the form to.  You can enter more than one email address separated by commas, like so: $my_email = "info@example.com"; or $my_email = "bob@example.com,sales@example.co.uk,jane@example.com";
 */
 
-$my_email = "riderjensen1@gmail.com";
+$my_email = "riderjensen@gmail.com";
 
 /*
 
