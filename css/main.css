@@ -16,7 +16,9 @@ body{
 .hidden{
     display: hidden;
 }
-
+.navbar-default{
+    opacity: 0;
+}
 
 .pracAreas{
     padding: 20px;
@@ -36,9 +38,6 @@ body{
 }
 
 .logo{
-    width: 25px;
-}
-.logoMed{
     width: 150px;
 }
 
@@ -53,8 +52,6 @@ body{
     padding: 10px;
 }
 .headerCont{
-    color: rgba(255, 255, 255, 1);
-    text-shadow: 2px 1px #fff;
     margin-top: 200px;
     height: 700px;
 
@@ -62,14 +59,12 @@ body{
 .darkText{
     color: black;
 }
-.alignCenter{
-    text-align: center;
-}
+
 .buttonFixTop{
     display: block;
     margin: auto;
-    width: 100px;
-    height: 50px;
+    width: 125px;
+    height: 55px;
     border-radius: 10px;
     border: 2px solid #ffffff;
     background: rgba(0,0,0, 1);
@@ -113,7 +108,6 @@ body{
 /* The image used */
 background-image: url("../img/timp.jpg");
 
-
 /* Create the parallax scrolling effect */
 background-attachment: fixed;
 background-position: center;
@@ -153,6 +147,9 @@ color: white;
 
 /*Phone */
 @media only screen and (max-width:459px){
+    .navbar-default{
+    opacity: 1;
+    }
     .paralaxPic{
     /* Set a specific height */
     height: 800px; 
@@ -243,6 +240,7 @@ color: white;
     font-size: 15px;
 }
 .titleCard{
+    margin-top: 250px;
     font-size: 60px;
 }
 
@@ -271,7 +269,6 @@ color: white;
 }
 .aboutMe{
     font-size: 18px;
-    text-shadow: 2px 1px #000;
 }
 .previousWork{
     font-size: 16px;
@@ -289,14 +286,11 @@ form #website{
     text-shadow: 2px 1px #000;
 }
 .control-label{
-    color: #000;
+    color: #fff;
 }
 #contactHeading{
-    color: #000;
+    color: #fff;
 }
-.orderedList li a{
-    color: white;
-}
-.navbar-default{
-    opacity: 0;
+.alignCenter{
+    text-align: center;
 }
