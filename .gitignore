@@ -1,2 +1,2 @@
 
-*.settings
+node_modules/*
