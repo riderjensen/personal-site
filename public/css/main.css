@@ -1,301 +1,345 @@
-
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
-body{
-    font-family: 'Roboto', sans-serif;
+html {
+	scroll-behavior: smooth;
 }
 
-.fixingWidth{
-    margin-left: 5%;
-    margin-right: 5%;
+body {
+	font-family: 'Roboto', sans-serif;
 }
 
-.hidden{
-    display: hidden;
-}
-.navbar-default{
-    opacity: 0;
+.fixingWidth {
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
-.pracAreas{
-    padding: 20px;
-    margin: 10px;
-    list-style-type: square;
-}
-.pracAreas li{
-    padding: 10px;
-    font-size: 3rem;
-
+.hidden {
+	display: hidden;
 }
 
-.pracAreas li p{
-    padding-top: 20px;
-    color: black;
-    font-size: 10pt;
+.navbar-default {
+	opacity: 0;
 }
 
-.logo{
-    width: 150px;
+.pracAreas {
+	padding: 20px;
+	margin: 10px;
+	list-style-type: square;
 }
 
-.atPhoto{
-    padding: 20px;
-}
-
-
-.fixTop{
-    margin: auto;
-    margin-top: 100px;
-    padding: 10px;
-}
-.headerCont{
-    margin-top: 200px;
-    height: 700px;
-
-}
-.darkText{
-    color: black;
-}
-
-.buttonFixTop{
-    display: block;
-    margin: auto;
-    width: 125px;
-    height: 55px;
-    border-radius: 10px;
-    border: 2px solid #ffffff;
-    background: rgba(0,0,0, 1);
-    color: white;
-    text-align: center;
-}
-.buttonFixTop:hover{
-    background-color: #808080;
-}
-
-.largeTopMargin{
-    margin-top: 150px;
-
-}
-.largeBottomMargin{
-    margin-bottom: 150px;
-}
-
-.medTopMargin{
-    margin-top: 75px;
-
-}
-.medBottomMargin{
-    margin-bottom: 75px;
-}
-.socialConnection{
-    margin-top: 35px;
-}
-.regMargBot{
-    margin-bottom: 50px;
-}
-.regMargTop{
-    margin-top: 50px;
-}
-.specMarg{
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-
-.paralaxPic{
-/* The image used */
-background-image: url("../img/timp.jpg");
-
-/* Create the parallax scrolling effect */
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
+.pracAreas li {
+	padding: 10px;
+	font-size: 3rem;
 
 }
 
-.paralaxPic2{
-/* The image used */
-background-image: url("../img/sAway.jpg");
+.pracAreas li p {
+	padding-top: 20px;
+	color: black;
+	font-size: 10pt;
+}
 
-/* Create the parallax scrolling effect */
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-color: white;
+.logo {
+	width: 150px;
+}
+
+.atPhoto {
+	padding: 20px;
+}
+
+
+.fixTop {
+	margin: auto;
+	margin-top: 100px;
+	padding: 10px;
+}
+
+.headerCont {
+	margin-top: 200px;
+	height: 700px;
 
 }
-.paralaxPic3{
-/* The image used */
-background-image: url("../img/invLaw.jpg");
 
+.darkText {
+	color: black;
+}
 
-/* Create the parallax scrolling effect */
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-color: white;
+.buttonFixTop {
+	display: block;
+	margin: auto;
+	width: 125px;
+	height: 55px;
+	border-radius: 10px;
+	border: 2px solid #ffffff;
+	background: rgba(0, 0, 0, 1);
+	color: white;
+	text-align: center;
+}
+
+.buttonFixTop:hover {
+	background-color: #808080;
+}
+
+.largeTopMargin {
+	margin-top: 20px;
 
 }
-.social{
-    background-color: #F5F5F5;
+
+.largeBottomMargin {
+	margin-bottom: 20px;
+}
+
+.medTopMargin {
+	margin-top: 75px;
+
+}
+
+.medBottomMargin {
+	margin-bottom: 75px;
+}
+
+.socialConnection {
+	margin-top: 35px;
+}
+
+.regMargBot {
+	margin-bottom: 50px;
+}
+
+.regMargTop {
+	margin-top: 50px;
+}
+
+.specMarg {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.paralaxPic {
+	/* The image used */
+	background-image: url("../img/timp.jpg");
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+.paralaxPic2 {
+	/* The image used */
+	background-image: url("../img/sAway.jpg");
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+
+}
+
+.paralaxPic3 {
+	/* The image used */
+	background-image: url("../img/invLaw.jpg");
+
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+
+}
+
+.social {
+	background-color: #F5F5F5;
 }
 
 /*Phone */
-@media only screen and (max-width:459px){
-    .navbar-default{
-    opacity: 1;
-    }
-    .paralaxPic{
-    /* Set a specific height */
-    height: 800px; 
-    width: 100%;
+@media only screen and (max-width:459px) {
+	.navbar-default {
+		opacity: 1;
+	}
 
-    }
-    .paralaxPic2{
+	.paralaxPic {
+		/* Set a specific height */
+		height: 800px;
+		width: 100%;
 
-    /* Set a specific height */
-    height: 1850px; 
-    width: 100%;
+	}
 
-    }
-    .paralaxPic3{
+	.paralaxPic2 {
 
-    height: 700px; 
-    width: 100%;
-    }
-    .headerCont{
-    color: rgba(255, 255, 255, 1);
-    margin-top: 50px;
-    height: 700px;
-    }
-    .specMarg{
-    margin-top: 0px;
-    margin-bottom: 0px;
-    }
-    .altMarginOne{
-        margin-top: 100px;
-    }
-    .altMarginTwo{
-        margin-bottom: 100px;
-    }
-    
+		/* Set a specific height */
+		height: 1850px;
+		width: 100%;
+
+	}
+
+	.paralaxPic3 {
+
+		height: 700px;
+		width: 100%;
+	}
+
+	.headerCont {
+		color: rgba(255, 255, 255, 1);
+		margin-top: 50px;
+		height: 700px;
+	}
+
+	.specMarg {
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+
+	.altMarginOne {
+		margin-top: 100px;
+	}
+
+	.altMarginTwo {
+		margin-bottom: 100px;
+	}
+
 }
+
 /*Tablet */
-@media only screen and (min-width: 460px) and (max-width:991px){
-    .paralaxPic{
-    /* Set a specific height */
-    height: 850px; 
-    width: 100%;
-    }
-     .paralaxPic2{
-/* The image used */
+@media only screen and (min-width: 460px) and (max-width:991px) {
+	.paralaxPic {
+		/* Set a specific height */
+		height: 100%;
+		width: 100%;
+	}
 
-    height: 1300px; 
-    width: 100%;
+	.paralaxPic2 {
+		/* The image used */
 
-    }
-    .paralaxPic3{
-    height: 700px; 
-    width: 100%;
-    }
-    .specMarg{
-    margin-top: 0px;
-    margin-bottom: 0px;
-    }
-    .altMarginOne{
-        margin-top: 100px;
-    }
-    .altMarginTwo{
-        margin-bottom: 100px;
-    }
+		height: 100%;
+		width: 100%;
+
+	}
+
+	.paralaxPic3 {
+		height: 700px;
+		width: 100%;
+	}
+
+	.specMarg {
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+
+	.altMarginOne {
+		margin-top: 100px;
+	}
+
+	.altMarginTwo {
+		margin-bottom: 100px;
+	}
 }
 
 /*Desktop */
-@media only screen and (min-width:992px){
-    .paralaxPic{
-    /* Set a specific height */
-    height: 1000px; 
-    width: 100%;
+@media only screen and (min-width:992px) {
+	.paralaxPic {
+		/* Set a specific height */
+		height: 1000px;
+		width: 100%;
 
-    }
-        .paralaxPic2{
-    /* Set a specific height */
-    height: 1000px; 
-    width: 100%;
+	}
+
+	.paralaxPic2 {
+		/* Set a specific height */
+		height: 100%;
+		width: 100%;
 
 
-    }
-    .paralaxPic3{
-    height: 550px; 
-    width: 100%;
-    }
+	}
 
-}
-.ourFirmBackground{
-    font-size: 15px;
-}
-.titleCard{
-    margin-top: 150px;
-    font-size: 60px;
+	.paralaxPic3 {
+		height: 550px;
+		width: 100%;
+	}
+
 }
 
-.subButton{
-    display: block;
-    margin: auto;
-    width: 100px;
-    height: 50px;
-    border-radius: 10px;
-    border: 2px solid #ffffff;
-    background: rgba(0,0,0, 1);
-    color: white;
-    text-align: center;
-}
-.subButton:hover{
-    background-color: #808080;
+.ourFirmBackground {
+	font-size: 15px;
 }
 
-.navbar-left li a{
-    margin-top: 10px;
-    font-size: 14pt;
-    padding: 10px;
+.titleCard {
+	margin-top: 150px;
+	font-size: 60px;
 }
-.navbar-right li a{
-    margin-top: 10px;
-    font-size: 14pt;
-    padding: 10px;
+
+.subButton {
+	display: block;
+	margin: auto;
+	width: 100px;
+	height: 50px;
+	border-radius: 10px;
+	border: 2px solid #ffffff;
+	background: rgba(0, 0, 0, 1);
+	color: white;
+	text-align: center;
 }
-.glyphPrevWork{
-    font-size: 30px;
+
+.subButton:hover {
+	background-color: #808080;
 }
-.aboutMe{
-    font-size: 18px;
+
+.navbar-left li a {
+	margin-top: 10px;
+	font-size: 14pt;
+	padding: 10px;
 }
-.previousWork{
-    font-size: 16px;
+
+.navbar-right li a {
+	margin-top: 10px;
+	font-size: 14pt;
+	padding: 10px;
 }
-form #website{
-    display: none;
+
+.glyphPrevWork {
+	font-size: 30px;
 }
-.website{
-    display: none;
+
+.aboutMe {
+	font-size: 18px;
 }
-.socMedIcon{
-    width: 40px;
+
+.previousWork {
+	font-size: 16px;
 }
-.aboutMeHeading{
-    text-shadow: 2px 1px #000;
+
+form #website {
+	display: none;
 }
-.control-label{
-    color: #fff;
+
+.website {
+	display: none;
 }
-#contactHeading{
-    color: #fff;
+
+.socMedIcon {
+	width: 40px;
 }
-.alignCenter{
-    text-align: center;
+
+.aboutMeHeading {
+	text-shadow: 2px 1px #000;
+}
+
+.control-label {
+	color: #fff;
+}
+
+#contactHeading {
+	color: #fff;
+}
+
+.alignCenter {
+	text-align: center;
 }
