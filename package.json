@@ -1,26 +1,29 @@
 {
-  "name": "personal-site",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/riderjensen/Personal-Site.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/riderjensen/Personal-Site/issues"
-  },
-  "homepage": "https://github.com/riderjensen/Personal-Site#readme",
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "ejs": "^2.6.1",
-    "express": "^4.16.4",
-    "nodemailer": "^4.7.0"
-  }
+	"name": "personal-site",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node app.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/riderjensen/Personal-Site.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/riderjensen/Personal-Site/issues"
+	},
+	"homepage": "https://github.com/riderjensen/Personal-Site#readme",
+	"dependencies": {
+		"body-parser": "^1.18.3",
+		"ejs": "^2.6.1",
+		"express": "^4.16.4",
+		"mongoose": "^5.4.6",
+		"nodemailer": "^4.7.0",
+		"snoostorm": "0.0.5",
+		"snoowrap": "^1.15.2"
+	}
 }
