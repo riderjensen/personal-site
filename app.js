@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const Snoowrap = require('snoowrap');
 const Snoostorm = require('snoostorm');
 const DayModel = require('./models/daySave');
-const redditUserInformation = require('./env');
+const redditUserInformation = require('../env');
 
 const apiRoute = require('./routes/api.route');
 
@@ -107,3 +107,6 @@ setInterval(() => {
 	})
 	console.log(countingObject)
 }, 360000)
+
+
+// mongod --dbpath "C:\Program Files\MongoDB\data"
