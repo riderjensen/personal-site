@@ -5,8 +5,6 @@ const apiController = require('../controllers/api.controller');
 
 router.get('/', apiController.getAll);
 
-router.get('/range/:id', apiController.getRange);
-
-router.get('/sub/:id', apiController.getSub);
+router.get('/:id', apiController.getRange);
 
 module.exports = router;
