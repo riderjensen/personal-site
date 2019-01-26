@@ -2,9 +2,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const mongoose = require('mongoose');
+const helmet = require('helmet');
 const Snoowrap = require('snoowrap');
 const Snoostorm = require('snoostorm');
-const helmet = require('helmet')
+
+const graphqlHTTP = require('express-graphql');
+const graphqlSchema = require('./graphql/schema');
+const graphqlResolver = require('./graphql/resolvers');
 
 const DayModel = require('./models/daySave');
 const redditUserInformation = require('../env');
@@ -39,6 +43,26 @@ app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
 app.use('/api', apiRoute);
+
+app.use('/sub', graphqlHTTP({
+	schema: graphqlSchema,
+	rootValue: graphqlResolver,
+	graphiql: true,
+	formatError(err) {
+		if (!err.originalError) {
+			return err;
+		}
+		const data = err.originalError.data;
+		const message = err.message || 'An error occured';
+		const code = err.originalError.code || 500;
+		return {
+			message: message,
+			status: code,
+			data,
+			data
+		};
+	}
+}));
 
 app.get('/', (req, res) => res.render('index'));
 
