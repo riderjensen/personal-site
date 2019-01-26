@@ -4,6 +4,8 @@ const nodemailer = require('nodemailer');
 const mongoose = require('mongoose');
 const Snoowrap = require('snoowrap');
 const Snoostorm = require('snoostorm');
+const helmet = require('helmet')
+
 const DayModel = require('./models/daySave');
 const redditUserInformation = require('../env');
 
@@ -20,6 +22,18 @@ app.use(bodyParser.urlencoded({
 	useNewUrlParser: true
 }));
 app.use(bodyParser.json());
+
+app.use(helmet());
+
+app.use((req, res, next) => {
+	res.setHeader('Access-Control-Allow-Origin', '*');
+	res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE');
+	res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+	if (req.method === 'OPTIONS') {
+		return res.sendStatus(200);
+	}
+	next();
+});
 
 app.set('views', './src/views');
 app.set('view engine', 'ejs');
