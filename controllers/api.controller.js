@@ -68,9 +68,3 @@ exports.getRange = (req, res, next) => {
 		})
 		.catch(err => console.log(err));
 }
-
-exports.getSub = (req, res, next) => {
-	const sub = req.params.id;
-
-	// use graphql to only return the one item from the object from the DB
-}
