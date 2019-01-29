@@ -1,15 +1,6 @@
 const DaySave = require('../models/daySave');
 
 exports.getAll = (req, res, next) => {
-	const newSave = DaySave({
-		items: {
-			'r/zoop': {
-				'com': 4,
-				'found': 8
-			}
-		}
-	})
-	newSave.save();
 	// return all results
 	DaySave.find().then(items => {
 		if (items == null) {
