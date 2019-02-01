@@ -12,6 +12,7 @@ Includes a portfolio and api as well as a bot
 * /api/update/:id - select the item that you want to update with the :id and an object with values that you want to fill it with
 
 Data must be in this format when sent
+```
 {
 	"items" : {
 		"com": number,
@@ -19,3 +20,4 @@ Data must be in this format when sent
 	
 	}
 }
+```
