@@ -2,7 +2,7 @@ const DaySave = require('../models/daySave');
 
 exports.getAll = (req, res, next) => {
 	// return all results
-	DaySave.find().then(items => {
+	DaySave.find().limit(100).then(items => {
 		if (items == null) {
 			res.status(500).send('The db is null for some reason');
 		} else {
@@ -58,4 +58,56 @@ exports.getRange = (req, res, next) => {
 			}
 		})
 		.catch(err => console.log(err));
+}
+
+
+exports.editOne = (req, res, next) => {
+	// get the id and edit the information
+	const theId = req.params.id;
+
+	const newItems = req.body.items;
+
+
+	if (newItems != null || newItems != undefined) {
+		DaySave.findOneAndUpdate(theId, {
+			items: newItems,
+		}).then(item => {
+			res.status(201).send(item);
+		})
+	} else {
+		res.status(500).send({
+			message: 'Missing items you want to update'
+		});
+	}
+
+}
+
+exports.deleteOne = (req, res, next) => {
+	// get the id and delete the one
+	const theId = req.params.id;
+	DaySave.findByIdAndDelete(theId).then(response => {
+		if (!response) {
+			return res.status(500).send({
+				message: 'Error in deleting'
+			});
+		}
+		res.status(200).send(response);
+	});
+
+}
+
+
+exports.createOne = (req, res, next) => {
+	// get the id and delete the one
+	const myNewItem = new DaySave({
+		items: {}
+	});
+	myNewItem.save().then(response => {
+		if (!response) {
+			return res.status(500).send({
+				message: 'Error in creating'
+			});
+		}
+		res.status(201).send(response);
+	});
 }
