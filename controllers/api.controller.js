@@ -61,6 +61,22 @@ exports.getRange = (req, res, next) => {
 }
 
 
+exports.findOne = (req, res, next) => {
+	const theId = req.params.id;
+
+	if (theId != null) {
+		DaySave.findById(theId).then(item => {
+			res.status(201).send(item);
+		})
+	} else {
+		res.status(500).send({
+			message: 'Missing items you want to update'
+		});
+	}
+
+
+}
+
 exports.editOne = (req, res, next) => {
 	// get the id and edit the information
 	const theId = req.params.id;
