@@ -115,9 +115,17 @@ exports.deleteOne = (req, res, next) => {
 
 exports.createOne = (req, res, next) => {
 	// get the id and delete the one
-	const myNewItem = new DaySave({
-		items: {}
-	});
+	const newItems = req.body.items;
+	let myNewItem;
+	if (newItems) {
+		myNewItem = new DaySave({
+			items: newItems
+		});
+	} else {
+		myNewItem = new DaySave({
+			items: {}
+		});
+	}
 	myNewItem.save().then(response => {
 		if (!response) {
 			return res.status(500).send({
