@@ -7,4 +7,10 @@ router.get('/', apiController.getAll);
 
 router.get('/:id', apiController.getRange);
 
+router.put('/update/:id', apiController.editOne);
+
+router.delete('/delete/:id', apiController.deleteOne);
+
+router.post('/create', apiController.createOne);
+
 module.exports = router;
