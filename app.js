@@ -125,15 +125,16 @@ comments.on('comment', (comment) => {
 	let commentSub = comment.subreddit_name_prefixed;
 	if (countingObject[commentSub]) {
 		countingObject[commentSub].com++;
+		if (comment.body.includes(wordSearchFor)) {
+			countingObject[commentSub].found++;
+		}
 	} else {
 		countingObject[commentSub] = {
 			com: 1,
 			found: 0
 		}
 	}
-	if (comment.body.includes(wordSearchFor)) {
-		countingObject[commentSub].found++;
-	}
+
 });
 
 setInterval(() => {
