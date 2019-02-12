@@ -5,9 +5,11 @@ const apiController = require('../controllers/api.controller');
 
 router.get('/', apiController.getAll);
 
+router.get('/:id', apiController.getOneSub);
+
 router.get('/range/:id', apiController.getRange);
 
-router.get('/findOne/:id', apiController.findOne);
+router.get('/:sub/:id', apiController.findOne);
 
 router.put('/update/:id', apiController.editOne);
 
