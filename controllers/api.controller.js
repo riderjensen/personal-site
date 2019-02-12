@@ -11,6 +11,26 @@ exports.getAll = (req, res, next) => {
 	});
 }
 
+exports.getOneSub = (req, res, all) => {
+	const subName = `r/${req.params.id}`;
+	const newObj = {
+		com: 0,
+		found: 0
+	};
+	DaySave.find()
+		.then(response => {
+			for (let i = 0; i < response.length; i++) {
+				if (response[i].items != undefined && response[i].items[subName] != undefined) {
+					newObj.com += response[i].items[subName].com;
+					newObj.found += response[i].items[subName].found;
+				}
+			}
+			res.send(newObj)
+		})
+		.catch(err => console.log(err))
+
+}
+
 exports.getRange = (req, res, next) => {
 	const range = req.params.id;
 	const rangeArray = range.split('$');
@@ -56,25 +76,46 @@ exports.getRange = (req, res, next) => {
 
 			res.status(200).send(dataArray);
 		}
-	})
-		.catch(err => console.log(err));
+	}).catch(err => console.log(err));
 }
 
 
 exports.findOne = (req, res, next) => {
-	const theId = req.params.id;
+	const theRange = req.params.id;
+	const theSub = `r/${req.params.sub}`;
 
-	if (theId != null) {
-		DaySave.findById(theId).then(item => {
-			res.status(201).send(item);
-		})
-	} else {
-		res.status(500).send({
-			message: 'Missing items you want to update'
-		});
-	}
+	const rangeArray = theRange.split('$');
 
+	const firstDate = rangeArray[0].split('-');
+	const secondDate = rangeArray[1].split('-');
 
+	// format YEAR-MM-DD$YEAR-MM-DD
+	// 2018-10-21$2019-10-21
+
+	DaySave.find({
+		"createdAt": {
+			"$gte": new Date(firstDate[0], firstDate[1] - 1, firstDate[2]),
+			"$lt": rangeArray[1] != undefined ? new Date(secondDate[0], secondDate[1] - 1, secondDate[2]) : new Date(2020, 1, 10)
+		}
+	}).then(returns => {
+		if (returns == null) {
+			res.status(500).send('The db is null for some reason');
+		} else {
+			let newObject = {
+				com: 0,
+				found: 0
+			};
+			for (let i = 0; i < returns.length; i++) {
+				console.log(returns[i].items[theSub])
+
+				if (returns[i].items != undefined && returns[i].items[theSub] != undefined) {
+					newObject.com += returns[i].items[theSub].com
+					newObject.found += returns[i].items[theSub].found
+				}
+			}
+			res.status(200).send(newObject);
+		}
+	}).catch(err => console.log(err));
 }
 
 exports.editOne = (req, res, next) => {
