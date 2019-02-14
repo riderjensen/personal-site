@@ -106,8 +106,6 @@ exports.findOne = (req, res, next) => {
 				found: 0
 			};
 			for (let i = 0; i < returns.length; i++) {
-				console.log(returns[i].items[theSub])
-
 				if (returns[i].items != undefined && returns[i].items[theSub] != undefined) {
 					newObject.com += returns[i].items[theSub].com
 					newObject.found += returns[i].items[theSub].found
