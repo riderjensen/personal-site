@@ -46,7 +46,7 @@
 			const itemArray = textSentence.split(" ");
 			let myNewThing = '';
 			itemArray.forEach(element => {
-				fetch(`http://words.bighugelabs.com/api/2/869bbb5f08d459f1da8ee09f2de5be4d/${element}/json`)
+				fetch(`https://words.bighugelabs.com/api/2/869bbb5f08d459f1da8ee09f2de5be4d/${element}/json`)
 					.then(response => response.json())
 					.then((myJson) => {
 						let myItems = [];
