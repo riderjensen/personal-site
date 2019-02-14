@@ -121,32 +121,32 @@ exports.editOne = (req, res, next) => {
 
 	if (newItems != null || newItems != undefined) {
 		DaySave.findById(theId).then(item => {
-			if(item){
-				for (let property in newItems){
-					if (!item.items) {
-						item.items = {};
-						item.items[property] = {
-							com: 0,
-							found: 0
+				if (item) {
+					for (let property in newItems) {
+						if (!item.items) {
+							item.items = {};
+							item.items[property] = {
+								com: 0,
+								found: 0
+							}
 						}
+						item.items[property].com = parseInt(newItems[property].com);
+						item.items[property].found = parseInt(newItems[property].found);
 					}
-					item.items[property].com = newItems[property].com;
-					item.items[property].found = newItems[property].found;
+					DaySave.findByIdAndUpdate(theId, {
+						items: item.items
+					}).then(resp => {
+						res.status(201).send(resp);
+					})
+				} else {
+					res.status(500).send({
+						message: 'We could not find an item with that id'
+					});
 				}
-				DaySave.findByIdAndUpdate(theId, {
-					items: item.items
-				}).then(resp => {
-					res.status(201).send(resp);
-				})
-			} else {
-				res.status(500).send({
-					message: 'We could not find an item with that id'
-				});
-			}
-		})
-		.catch(err => res.status(500).send({
-			message: err
-		}))
+			})
+			.catch(err => res.status(500).send({
+				message: err
+			}))
 	} else {
 		res.status(500).send({
 			message: 'Missing items you want to update'
