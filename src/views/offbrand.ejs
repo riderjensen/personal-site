@@ -53,7 +53,7 @@
 						for (let item in myJson) {
 							myItems = myItems.concat(myJson[item].syn)
 						}
-						myNewThing += ` ${myItems[0]}`;
+						myNewThing += ` ${myItems[getRandomArbitrary(1, myItems.length)]}`;
 						document.getElementById('information').innerText = myNewThing;
 					})
 					.catch(err => console.log(err));
