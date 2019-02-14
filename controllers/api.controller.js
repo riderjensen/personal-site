@@ -119,16 +119,36 @@ exports.findOne = (req, res, next) => {
 exports.editOne = (req, res, next) => {
 	// get the id and edit the information
 	const theId = req.params.id;
-
 	const newItems = req.body.items;
 
-
 	if (newItems != null || newItems != undefined) {
-		DaySave.findOneAndUpdate(theId, {
-			items: newItems,
-		}).then(item => {
-			res.status(201).send(item);
+		DaySave.findById(theId).then(item => {
+			if(item){
+				for (let property in newItems){
+					if (!item.items) {
+						item.items = {};
+						item.items[property] = {
+							com: 0,
+							found: 0
+						}
+					}
+					item.items[property].com = newItems[property].com;
+					item.items[property].found = newItems[property].found;
+				}
+				DaySave.findByIdAndUpdate(theId, {
+					items: item.items
+				}).then(resp => {
+					res.status(201).send(resp);
+				})
+			} else {
+				res.status(500).send({
+					message: 'We could not find an item with that id'
+				});
+			}
 		})
+		.catch(err => res.status(500).send({
+			message: err
+		}))
 	} else {
 		res.status(500).send({
 			message: 'Missing items you want to update'
@@ -153,18 +173,9 @@ exports.deleteOne = (req, res, next) => {
 
 
 exports.createOne = (req, res, next) => {
-	// get the id and delete the one
-	const newItems = req.body.items;
-	let myNewItem;
-	if (newItems) {
-		myNewItem = new DaySave({
-			items: newItems
-		});
-	} else {
-		myNewItem = new DaySave({
-			items: {}
-		});
-	}
+	let myNewItem = new DaySave({
+		items: {}
+	});
 	myNewItem.save().then(response => {
 		if (!response) {
 			return res.status(500).send({
