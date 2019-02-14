@@ -83,9 +83,7 @@ exports.getRange = (req, res, next) => {
 exports.findOne = (req, res, next) => {
 	const theRange = req.params.id;
 	const theSub = `r/${req.params.sub}`;
-
 	const rangeArray = theRange.split('$');
-
 	const firstDate = rangeArray[0].split('-');
 	const secondDate = rangeArray[1].split('-');
 
