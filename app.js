@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const sendgridTransport = require('nodemailer-sendgrid-transport');
 const mongoose = require('mongoose');
 const helmet = require('helmet');
 const Snoowrap = require('snoowrap');
@@ -79,22 +80,18 @@ app.post('/submit', (req, res) => {
 			Comments
 		} = req.body;
 
-		const transporter = nodemailer.createTransport({
-			service: 'gmail',
-			auth: {
-				user: 'riderjensen@gmail.com',
-				pass: ''
-			}
-		});
 
-		const mailOptions = {
-			from: 'riderjensen@gmail.com',
+		const transporter = nodemailer.createTransport(sendgridTransport({
+			auth: {
+				api_key: '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'
+			}
+		}));
+		transporter.sendMail({
 			to: 'riderjensen@gmail.com',
+			from: 'shop@ridershop.com',
 			subject: `Website message from ${Name}`,
 			text: `A new request has come in from ${Name}. They say "${Subject}": "${Comments}". They can be reached at ${Phone} or ${userEmail}.`
-		};
-
-		transporter.sendMail(mailOptions, (error) => console.log(error));
+		})
 
 		res.render('thank-you');
 	}
