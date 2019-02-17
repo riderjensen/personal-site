@@ -1,7 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
-const sendgridTransport = require('nodemailer-sendgrid-transport');
 const mongoose = require('mongoose');
 const helmet = require('helmet');
 const Snoowrap = require('snoowrap');
@@ -70,32 +68,6 @@ app.use('/sub', graphqlHTTP({
 
 app.get('/', (req, res) => res.render('index'));
 
-app.post('/submit', (req, res) => {
-	if (req.body.email === '') {
-		const {
-			Name,
-			userEmail,
-			Phone,
-			Subject,
-			Comments
-		} = req.body;
-
-
-		const transporter = nodemailer.createTransport(sendgridTransport({
-			auth: {
-				api_key: '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'
-			}
-		}));
-		transporter.sendMail({
-			to: 'riderjensen@gmail.com',
-			from: 'shop@ridershop.com',
-			subject: `Website message from ${Name}`,
-			text: `A new request has come in from ${Name}. They say "${Subject}": "${Comments}". They can be reached at ${Phone} or ${userEmail}.`
-		})
-
-		res.render('thank-you');
-	}
-});
 
 mongoose.connect('mongodb://localhost:27017/redditDays', {
 	useNewUrlParser: true
