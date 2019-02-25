@@ -68,6 +68,7 @@ app.use('/sub', graphqlHTTP({
 
 app.get('/', (req, res) => res.render('index'));
 
+app.get('*', (req, res) => res.redirect('/'))
 
 mongoose.connect('mongodb://localhost:27017/redditDays', {
 	useNewUrlParser: true
