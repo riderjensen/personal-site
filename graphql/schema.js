@@ -3,12 +3,15 @@ const {
 } = require('graphql');
 
 module.exports = buildSchema(`	
-	type Test {
-		title: String
+
+	type getObj {
+		id: String!
+		createdAt: String!
+		updatedAt: String!
 	}
 
 	type RootQuery {
-		boop: Test
+		getNames: [getObj]
 	}
 
 	schema {
