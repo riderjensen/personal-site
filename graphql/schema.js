@@ -23,11 +23,11 @@ module.exports = buildSchema(`
 	}
 
 	type RootQuery {
-		getOneById(id: ID!): getObj 
+		getOneById(id: ID! sub: String!): getObj 
 		getNames: [getObj]
 		getSubName(name: String!): subName
 		getRange(sub: String!, start: String!, end: String): [subName]!
-		getCopmbinedRange(sub: String!, start: String!, end: String): subName!
+		getCombinedRange(sub: String!, start: String!, end: String): subName!
 	}
 
 	type RootMutation {

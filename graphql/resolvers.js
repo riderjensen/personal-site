@@ -8,7 +8,7 @@ module.exports = {
 	getOneById: async (args) => {
 		const resp = await DaySave.findById(args.id);
 		if (!resp) throw new error('We cant find an item in the DB with this ID');
-		return resp;
+		return resp.items[args.sub];
 	},
 	getSubName: async (args) => {
 		const subName = `r/${args.name}`;
