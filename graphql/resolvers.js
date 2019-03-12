@@ -107,7 +107,6 @@ module.exports = {
 		if (resp.items.hasOwnProperty(`r/${args.sub}`)) {
 			resp.items[`r/${args.sub}`].com += args.completedFound.com;
 			resp.items[`r/${args.sub}`].found += args.completedFound.found;
-			console.log(resp.items)
 		} else {
 			resp.items[`r/${args.sub}`] = args.comFound
 		}
@@ -120,40 +119,52 @@ module.exports = {
 
 // sample queries
 
-// query zipZap{
+// query getNames{
 // 	getNames{
 // 		id
+//     updatedAt
 // 		createdAt
 // 	}
 // }
 
-// query getRange{
-// 	getRange(start: "1551901377407" end: "1551901377407" sub: "funny") {
-// 		com
-// 		found
+
+// query getFullRange{
+// 	getRange(start: "0" end: "9551901377407" sub: "funny") {
+// 		createdAt
+//     updatedAt
+//     id
+//     item{
+//       com
+//       found
+//     }
 // 	}
 // }
 
 // query getCombined{
-// 	getCopmbinedRange(start: "1551752554719" end: "1551761554799" sub: "funny") {
+// 	getCombinedRange(start: "0" end: "9551901377407" sub: "funny") {
 // 		com
 // 		found
 // 	}
 // }
 
 // query getOne{
-// 	getOneById(id: "5c8022c1649be444bcc21cdb"){
-// 		id,
-// 			createdAt
+// 	getOneById(id: "5c870481cbe1cb29e8ee44e5" sub: "funny"){
+// 		id
+//     updatedAt
+// 		createdAt
+//     item{
+//       com
+//       found
+//     }
 // 	}
 // }
 
 // mutation deleteOne{
-// 	deleteDataPoint(id: "5c8022c1649be444bcc21cdb")
+// 	deleteDataPoint(id: "5c7de1a2c7326e595bcc8cd2")
 // }
 
 // mutation deleteSubOne{
-// 	deleteSubDataPoint(id: "5c7de03ac7326e595bcc8cd1", sub: "news")
+// 	deleteSubDataPoint(id: "5c7de1a2c7326e595bcc8cd2", sub: "news")
 // }
 
 // mutation createANewOne{
@@ -163,7 +174,7 @@ module.exports = {
 // }
 
 // mutation editOne{
-// 	editItem(id: "5c8022c1649be444bcc21cdb" sub: "funny" completedFound: {
+// 	editItem(id: "5c870481cbe1cb29e8ee44e5" sub: "funny" completedFound: {
 // 		com: 10,
 // 		found: 5
 // 	})
