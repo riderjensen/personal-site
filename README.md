@@ -34,44 +34,67 @@ Any start and end dates are seconds since Epoch.
 Examples of queries
 
 ```
-query getNames{
-	getNames{
+query getAllItems{
+	getAllItems{
 		id
     updatedAt
 		createdAt
+    items{
+      funny{
+        com
+        found
+      }
+    }
 	}
 }
 
 
 query getFullRange{
-	getRange(start: "0" end: "9551901377407" sub: "funny") {
+	getRange(start: "0" end: "9551901377407") {
 		createdAt
     updatedAt
     id
-    item{
-      com
-      found
+    items{
+      funny{
+        com
+        found
+      }
+      explainlikeimfive{
+        com
+        found
+      }
     }
 	}
 }
 
 query getCombined{
-	getCombinedRange(start: "0" end: "9551901377407" sub: "funny") {
-		com
-		found
+	getCombinedRange(start: "0" end: "9551901377407") {
+		items{
+      funny{
+        com
+        found
+      }
+    }
 	}
 }
 
+
 query getOne{
-	getOneById(id: "{ID}" sub: "funny"){
-		id
+  getOneById(id: "{ID}"){
+    id
     updatedAt
-		createdAt
-    item{
-      com
-      found
+    createdAt
+    items{
+      funny{
+        com
+        found
+      }
+      explainlikeimfive{
+        com
+        found
+      }
     }
-	}
+  }
 }
 
 mutation deleteOne{
@@ -79,7 +102,7 @@ mutation deleteOne{
 }
 
 mutation deleteSubOne{
-	deleteSubDataPoint(id: "{ID}", sub: "news")
+	deleteSubDataPoint(id: "{ID}", sub: "funny")
 }
 
 mutation createANewOne{
@@ -90,8 +113,8 @@ mutation createANewOne{
 
 mutation editOne{
 	editItem(id: "{ID}" sub: "funny" completedFound: {
-		com: 10,
-		found: 5
+		com: 11,
+		found: 0
 	})
 }
 
