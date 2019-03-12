@@ -16,6 +16,13 @@ module.exports = buildSchema(`
 	}
 	
 
+	type getObjWithItem {
+		id: String!
+		item: subName
+		createdAt: String!
+		updatedAt: String!
+	}
+
 	type getObj {
 		id: String!
 		createdAt: String!
@@ -23,10 +30,10 @@ module.exports = buildSchema(`
 	}
 
 	type RootQuery {
-		getOneById(id: ID! sub: String!): getObj 
+		getOneById(id: ID! sub: String!): getObjWithItem 
 		getNames: [getObj]
 		getSubName(name: String!): subName
-		getRange(sub: String!, start: String!, end: String): [subName]!
+		getRange(sub: String!, start: String!, end: String): [getObjWithItem]!
 		getCombinedRange(sub: String!, start: String!, end: String): subName!
 	}
 

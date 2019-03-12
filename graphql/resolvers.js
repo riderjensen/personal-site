@@ -8,7 +8,8 @@ module.exports = {
 	getOneById: async (args) => {
 		const resp = await DaySave.findById(args.id);
 		if (!resp) throw new error('We cant find an item in the DB with this ID');
-		return resp.items[args.sub];
+		resp.item = resp.items[`r/${args.sub}`];
+		return resp;
 	},
 	getSubName: async (args) => {
 		const subName = `r/${args.name}`;
@@ -40,15 +41,20 @@ module.exports = {
 		for (let i = 0; i < resp.length; i++) {
 			if (resp[i].items != undefined && resp[i].items[theSub] != undefined) {
 				const obj = {
-					com: resp[i].items[theSub].com,
-					found: resp[i].items[theSub].found
+					id: resp[i]._id,
+					updatedAt: resp[i].updatedAt,
+					createdAt: resp[i].createdAt,
+					item: {
+						com: resp[i].items[theSub].com,
+						found: resp[i].items[theSub].found
+					}
 				}
 				newArray.push(obj)
 			}
 		}
 		return newArray;
 	},
-	getCopmbinedRange: async (args) => {
+	getCombinedRange: async (args) => {
 		const theSub = `r/${args.sub}`;
 
 		const resp = await DaySave.find({
