@@ -124,8 +124,3 @@ try {
 } catch (err) {
 	console.log(err)
 }
-
-
-
-
-// mongod --dbpath "C:\Program Files\MongoDB\data"
