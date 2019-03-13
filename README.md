@@ -2,7 +2,7 @@
 
 Includes a portfolio and api as well as a bot
 
-## Api Instructions
+## REST Api Instructions
 
 * /api - Gets 100 items from the DB
 * /api/range/:range - Gets range must be sent in the following format YEAR-MM-DD$YEAR-MM-DD
@@ -21,4 +21,102 @@ Data must be in this format when sent
 	
 	}
 }
+```
+
+## GraphQL 
+
+* /sub - GraphiQL area
+
+Before running any queries, you will want to run createANewOne in order to get an ID that you can edit. The only items that you are allowed to edit are ones that you have generated yourself. You may then replace all instances of {ID} in the code with your ID as a string.
+
+Any start and end dates are seconds since Epoch.
+
+Examples of queries
+
+```
+query getAllItems{
+	getAllItems{
+		id
+    updatedAt
+		createdAt
+    items{
+      funny{
+        com
+        found
+      }
+    }
+	}
+}
+
+
+query getFullRange{
+	getRange(start: "0" end: "9551901377407") {
+		createdAt
+    updatedAt
+    id
+    items{
+      funny{
+        com
+        found
+      }
+      explainlikeimfive{
+        com
+        found
+      }
+    }
+	}
+}
+
+query getCombined{
+	getCombinedRange(start: "0" end: "9551901377407") {
+		items{
+      funny{
+        com
+        found
+      }
+    }
+	}
+}
+
+
+query getOne{
+  getOneById(id: "{ID}"){
+    id
+    updatedAt
+    createdAt
+    items{
+      funny{
+        com
+        found
+      }
+      explainlikeimfive{
+        com
+        found
+      }
+    }
+  }
+}
+
+mutation deleteOne{
+	deleteDataPoint(id: "{ID}")
+}
+
+mutation deleteSubOne{
+	deleteSubDataPoint(id: "{ID}", sub: "funny")
+}
+
+mutation createANewOne{
+	createNewItem{
+		id
+	}
+}
+
+mutation editOne{
+	editItem(id: "{ID}" sub: "funny" completedFound: {
+		com: 11,
+		found: 0
+	})
+}
+
+
 ```
