@@ -97,12 +97,14 @@ module.exports = {
 		for (let i = 0; i < resp.length; i++) {
 			if (resp[i].items != undefined) {
 				for (let item in resp[i].items) {
-					obj.items[item.split('/')[1]] ? null : obj.items[item.split('/')[1]] = {
-						com: 0,
-						found: 0
-					};
-					obj.items[item.split('/')[1]].com += resp[i].items[item].com === null ? 0 : resp[i].items[item].com
-					obj.items[item.split('/')[1]].found += resp[i].items[item].found === null ? 0 : resp[i].items[item].found
+					if (resp[i].items[item] !== undefined && resp[i].items[item] !== null) {
+						obj.items[item.split('/')[1]] === null ? obj.items[item.split('/')[1]] = {
+							com: 0,
+							found: 0
+						} : null;
+						obj.items[item.split('/')[1]].com += resp[i].items[item].com === null ? 0 : resp[i].items[item].com
+						obj.items[item.split('/')[1]].found += resp[i].items[item].found === null ? 0 : resp[i].items[item].found
+					}
 				}
 			}
 		}
