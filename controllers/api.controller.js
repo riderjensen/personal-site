@@ -46,7 +46,7 @@ exports.getRange = (req, res, next) => {
 			"$gte": new Date(firstDate[0], firstDate[1] - 1, firstDate[2]),
 			"$lt": rangeArray[1] != undefined ? new Date(secondDate[0], secondDate[1] - 1, secondDate[2]) : new Date(2020, 1, 10)
 		}
-	}).then(returns => {
+	}).limit(100).then(returns => {
 		if (returns == null) {
 			res.status(500).send('The db is null for some reason');
 		} else {
@@ -121,29 +121,29 @@ exports.editOne = (req, res, next) => {
 
 	if (newItems != null || newItems != undefined) {
 		DaySave.findById(theId).then(item => {
-				if (item) {
-					for (let property in newItems) {
-						if (!item.items) {
-							item.items = {};
-							item.items[property] = {
-								com: 0,
-								found: 0
-							}
+			if (item) {
+				for (let property in newItems) {
+					if (!item.items) {
+						item.items = {};
+						item.items[property] = {
+							com: 0,
+							found: 0
 						}
-						item.items[property].com = parseInt(newItems[property].com);
-						item.items[property].found = parseInt(newItems[property].found);
 					}
-					DaySave.findByIdAndUpdate(theId, {
-						items: item.items
-					}).then(resp => {
-						res.status(201).send(resp);
-					})
-				} else {
-					res.status(500).send({
-						message: 'We could not find an item with that id'
-					});
+					item.items[property].com = parseInt(newItems[property].com);
+					item.items[property].found = parseInt(newItems[property].found);
 				}
-			})
+				DaySave.findByIdAndUpdate(theId, {
+					items: item.items
+				}).then(resp => {
+					res.status(201).send(resp);
+				})
+			} else {
+				res.status(500).send({
+					message: 'We could not find an item with that id'
+				});
+			}
+		})
 			.catch(err => res.status(500).send({
 				message: err
 			}))

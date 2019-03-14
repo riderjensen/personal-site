@@ -7,7 +7,7 @@ Includes a portfolio and api as well as a bot
 * /api - Gets 100 items from the DB
 * /api/range/:range - Gets range must be sent in the following format YEAR-MM-DD$YEAR-MM-DD
 * /api/:sub - Tries to find the sub, doesnt include r/. For example, look for r/askreddit with just typing in /askreddit
-* /api/:sub/:range - Does the same thing as /:sub but with a range within this format YEAR-MM-DD$YEAR-MM-DD
+* /api/:sub/:range - Does the same thing as /:sub but with a range within this format YEAR-MM-DD$YEAR-MM-DD (limit 100)
 * /api/create - returns a new item product id that you can update or delete
 * /api/delete/:id - delete the item from the database
 * /api/update/:id - select the item that you want to update with the :id and an object with values that you want to fill it with
@@ -29,7 +29,7 @@ Data must be in this format when sent
 
 Before running any queries, you will want to run createANewOne in order to get an ID that you can edit. The only items that you are allowed to edit are ones that you have generated yourself. You may then replace all instances of {ID} in the code with your ID as a string.
 
-Any start and end dates are seconds since Epoch.
+Any start and end dates are seconds since Epoch. getCombinedRange is limited to 100 responses
 
 Examples of queries
 

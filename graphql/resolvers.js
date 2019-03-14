@@ -87,7 +87,7 @@ module.exports = {
 				"$gte": new Date(parseInt(args.start)),
 				"$lt": args.end != undefined ? new Date(parseInt(args.end) + 1) : new Date(2020, 1, 10)
 			}
-		})
+		}).limit(100)
 		const obj = {
 			items: {
 
@@ -95,15 +95,18 @@ module.exports = {
 		}
 
 		for (let i = 0; i < resp.length; i++) {
-			if (resp[i].items != undefined) {
+			if (resp[i] !== undefined && resp[i].items !== undefined) {
 				for (let item in resp[i].items) {
-					if (resp[i].items[item] !== undefined && resp[i].items[item] !== null) {
-						obj.items[item.split('/')[1]] === null ? obj.items[item.split('/')[1]] = {
-							com: 0,
-							found: 0
-						} : null;
-						obj.items[item.split('/')[1]].com += resp[i].items[item].com === null ? 0 : resp[i].items[item].com
-						obj.items[item.split('/')[1]].found += resp[i].items[item].found === null ? 0 : resp[i].items[item].found
+					if (resp[i].items[item] !== null) {
+						if (obj.items[item.split('/')[1]] === null || obj.items[item.split('/')[1]] == undefined) {
+							obj.items[item.split('/')[1]] = {
+								com: 0,
+								found: 0
+							}
+						} else {
+							obj.items[item.split('/')[1]].com += resp[i].items[item].com === null ? 0 : resp[i].items[item].com
+							obj.items[item.split('/')[1]].found += resp[i].items[item].found === null ? 0 : resp[i].items[item].found
+						}
 					}
 				}
 			}
