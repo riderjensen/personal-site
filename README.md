@@ -29,7 +29,7 @@ Data must be in this format when sent
 
 Before running any queries, you will want to run createANewOne in order to get an ID that you can edit. The only items that you are allowed to edit are ones that you have generated yourself. You may then replace all instances of {ID} in the code with your ID as a string.
 
-Any start and end dates are seconds since Epoch. getCombinedRange is limited to 100 responses
+Any start and end dates are seconds since Epoch. getCombinedRange is limited to 1000 responses
 
 Examples of queries
 

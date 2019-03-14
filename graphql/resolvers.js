@@ -87,7 +87,7 @@ module.exports = {
 				"$gte": new Date(parseInt(args.start)),
 				"$lt": args.end != undefined ? new Date(parseInt(args.end) + 1) : new Date(2020, 1, 10)
 			}
-		}).limit(100)
+		}).limit(1000)
 		const obj = {
 			items: {
 
