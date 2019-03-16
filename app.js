@@ -70,7 +70,7 @@ app.get('/', (req, res) => res.render('index'));
 
 app.get('*', (req, res) => res.redirect('/'))
 
-mongoose.connect('mongodb+srv://test-user:12345678Ah@nodecourse-zfafv.mongodb.net/redditDays?retryWrites=true', {
+mongoose.connect(`mongodb+srv://${redditUserInformation.username}:${redditUserInformation.password}@nodecourse-zfafv.mongodb.net/redditDays?retryWrites=true`, {
 	useNewUrlParser: true
 }).then(() => {
 	app.listen(port, () => console.log(`Example app listening on port ${port}!`))
