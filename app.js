@@ -96,7 +96,7 @@ try {
 	let countingObject = {};
 
 	comments.on('comment', (comment) => {
-		let commentSub = comment.subreddit_name_prefixed;
+		let commentSub = comment.subreddit_name_prefixed.split('r/')[1];
 		if (countingObject[commentSub]) {
 			countingObject[commentSub].com++;
 			if (comment.body.includes(wordSearchFor)) {
