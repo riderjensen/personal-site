@@ -2,14 +2,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const helmet = require('helmet');
-const Snoowrap = require('snoowrap');
-const Snoostorm = require('snoostorm');
 
 const graphqlHTTP = require('express-graphql');
 const graphqlSchema = require('./graphql/schema');
 const graphqlResolver = require('./graphql/resolvers');
 
-const DayModel = require('./models/daySave');
 const redditUserInformation = require('../env');
 
 const apiRoute = require('./routes/api.route');
