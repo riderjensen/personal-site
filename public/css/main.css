@@ -34,11 +34,11 @@ iframe {
 }
 
 .secondary-color {
-    color: #4EA64D
+    color: 	hsl(17, 100%, 50%);
 }
 
 .highlight-color {
-    color: #F0A830;
+    color: 	hsl(200, 15%, 24%);
 }
 
 .text-white {
@@ -50,18 +50,18 @@ iframe {
 
 /* ====== overriders ====== */
 .navbar-light .navbar-brand {
-    color: #4EA64D;
+    color: 	hsl(200, 15%, 24%);
 }
 
 .navbar-light .navbar-brand:hover {
-    color: #358D34;
+    color: 	hsl(200, 15%, 24%);
 }
 
 .btn-primary {
-    background-color: hsl(38, 86%, 56%);
+    background-color: 	hsl(17, 100%, 50%);
     padding: 10px 20px;
     border: 2px solid rgba(0, 0, 0, 0.0);
-    color: #000;
+    color: #fff;
     border-radius: 0;
     transition: all ease-in 0.2s;
 }
@@ -69,33 +69,13 @@ iframe {
 .btn-primary:hover {
     background-color: rgba(0, 0, 0, 0.0);
     color: #fff;
-    border: 2px solid hsl(38, 86%, 56%);
-}
-
-.btn-secondary {
-    border: 2px solid hsl(38, 86%, 56%);
-    background-color: rgba(0, 0, 0, 0.0);
-    padding: 10px 20px;
-    color: #fff;
-    border-radius: 0;
-    margin-left: 10px;
-    transition: all ease-in 0.2s;
-}
-
-.btn-secondary:hover {
-    background-color: hsl(38, 86%, 56%);
-    color: #000;
-    border: 2px solid rgba(0, 0, 0, 0.0);
-}
-
-a.secondary-color:hover {
-    color: #358D34;
+    border: 2px solid 	hsl(17, 100%, 50%);
 }
 
 /* ======= Start Header ====== */
 
 .jumbotron {
-    border-top: 4px solid #F0A830;
+    border-top: 4px solid hsl(17, 100%, 50%);
     position: relative;
     height: auto;
     background-image: url('../img/main-header.jpg');

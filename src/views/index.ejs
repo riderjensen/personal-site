@@ -11,469 +11,343 @@
 	<link rel="icon" sizes="192x192" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel="stylesheet" href="/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
-	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="css/fontawesome/all.css">
+	<link rel="stylesheet" href="css/main.css">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112983194-1"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
 		gtag('js', new Date());
 
 		gtag('config', 'UA-112983194-1');
 	</script>
-	<script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 	<!-- Font Awesome -->
-	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 </head>
 
 <body>
 
-	<nav class="navbar navbar-default navbar-fixed-top" data-spy="affix">
-		<div class="container">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-					data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#top"><img class="logo" src="img/logo.png"
-						alt="Rider Jensen Creations Logo"></a>
-			</div>
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-				<ul id="ulClassHeader" class="nav navbar-nav navbar-right hidden">
-					<li><a id="greetingMessage" href="#"></a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-left orderedList">
-					<li><a href="#prevWork" title="Anchor tag to the work section">Work</a></li>
-					</li>
-					<li><a href="#people" title="Anchor tag to the about section">About</a></li>
-					</li>
-					<li><a href="#practice" title="Anchor tag to the skills section">Skills</a></li>
-					</li>
-					<li><a href="#contact" title="Anchor tag to the contact section">Contact</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right orderedList">
-					<li>
-						<a target="_blank" href="https://github.com/riderjensen">Github</a>
-					</li>
-					<li>
-						<a target="_blank"
-							href="https://drive.google.com/file/d/1OWBIarpg4eqlThcLUaurgWbn3uxN4Vmf/view?usp=sharing">Resume</a>
-					</li>
-					<li>
-						<a target="_blank"
-							href="https://docs.google.com/document/d/1X4iFJ9LqhrVLlwJb9nxnMdZfFHXwgICUF5aJ-ba-qdQ/edit?usp=sharing">Sites
-							I Have Created</a>
-					</li>
-				</ul>
-			</div><!-- /.navbar-collapse -->
-		</div><!-- /.container-fluid -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar-example2">
+		<a class="navbar-brand" href="#top">Rider Jensen</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#about">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#projects">Projects</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#skills">Skills</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#contact">Contact</a>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="nav-item">
+					<a target="_blank" class="nav-link" href="https://github.com/riderjensen">Github</a>
+				</li>
+				<li class="nav-item">
+					<a target="_blank" class="nav-link"
+						href="https://drive.google.com/file/d/1OWBIarpg4eqlThcLUaurgWbn3uxN4Vmf/view?usp=sharing">Resume</a>
+				</li>
+				<li class="nav-item">
+					<a target="_blank" class="nav-link"
+						href="https://docs.google.com/document/d/1X4iFJ9LqhrVLlwJb9nxnMdZfFHXwgICUF5aJ-ba-qdQ/edit?usp=sharing">Creatons</a>
+				</li>
+			</ul>
+		</div>
 	</nav>
+
+
 
 	<!-- Main jumbotron for a primary marketing message or call to action -->
 	<a id="top"></a>
-	<div class="paralaxPic" id="paralaxPic">
-		<div class="container ">
-			<div class="row headerCont">
-				<div class="col-md-12">
-					<h1 class="alignCenter titleCard darkText">Rider Jensen</h1>
-					<h2 class="alignCenter darkText">Web and App Development</h2>
-					<a href="#contact"><button class="buttonFixTop">Contact</button></a>
-
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-
-	<div class="container">
-		<a id="prevWork"></a>
-		<div class="row">
-			<div class="col-md-12 alignCenter largeTopMargin">
-				<h1>Previous Work</h1>
-				<br>
-				<br>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-6">
-				<h3><span class="glyphicon glyphicon-cloud glyphPrevWork" aria-hidden="true"></span> Backend</h3>
-				<h4><a href="https://github.com/riderjensen/usabilityTesting" target="_blank">Node + Mongo Web
-						Application for
-						Usability</a></h4>
-				<h4><a href="https://github.com/riderjensen/chatServer" target="_blank">Node + Mongo Chat Server</a>
-				</h4>
-				<h4><a href="https://github.com/riderjensen/PHP---MySQL" target="_blank">PHP and MySQL Movie Theater
-						Listings</a></h4>
-
-			</div>
-			<div class="col-md-6 regMargBot">
-				<p class="previousWork">Node with Express and Mongo are what I love to develop in for my backend. I will
-					often use
-					EJS as my templating language though I have used both handlebars and PUG before. Creating RESTful
-					APIs using
-					express is fun to expiriment with and pairs well when I work with frontend frameworks like Vue.js.
-					Deciding on
-					information end points usually helps me decide what stack I will be using. </p>
-			</div>
-		</div>
-	</div>
-	<div class="container-fluid social">
+	<div class="jumbotron">
+		<div class="jumbo-opacity"></div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 specMarg altMarginOne">
-					<h3><span class="glyphicon glyphicon-tasks glyphPrevWork alignCenter" aria-hidden="true"></span>
-						Frontend/CMS</h3>
-					<h4><a href="https://github.com/riderjensen/chatServer" target="_blank">Bootstrap with a connected
-							backend</a></h4>
-					<h4><a href="https://www.uvu.edu/criminaljustice/policeacademy/application.html"
-							target="_blank">Bootstrap
-							combined with a CMS</a></h4>
-					<h4><a href="https://github.com/riderjensen/vue-final-rider" target="_blank">Vue with Netlify
-							deployment</a></h4>
+				<h1 class="display-4 text-white">Web Development<br /><span class="secondary-color">with a human
+						touch</span>.</h1>
+				<p class="lead text-white width-100">Stop sharing bad photographs of your real estate listing.</p>
+				<p class="width-100 text-white">New 360 video tours allow users to experience a house from anywhere in
+					the world. Contact us to learn more about our services.
+				</p>
+				<a class="btn btn-primary btn-lg" href="#contact" role="button">Contact Me</a>
+
+			</div>
+		</div>
+	</div>
+
+
+	<div>
+		<!-- Our Team -->
+		<div class="container padding-top-50 padding-bottom-50" id="about" style="position: relative;">
+			<canvas class="background"></canvas>
+
+			<div class="row padding-top-50">
+				<div class="col-md-12 col-lg-6 offset-lg-3">
+					<div class="card staff">
+						<div class="cover-image rounded-circle">
+							<img src="./img/rider.jpg" />
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Rider Jensen</h5>
+							<p class="title">Web Developer</p>
+							<p class="card-text">Self-starter junior web developer with great project management skills
+								and
+								3+
+								years of hands on progressive experience. I am a highly ambitious problem solver
+								with a strong desire to learn and keep up on new trends. Adept at working
+								with Agile and Scrum methodologies to accomplish project milestones. </p>
+							<p class="connect"><a href="https://www.linkedin.com/in/rider-jensen/" target="_blank"
+									title="Rider Jensen's LinkedIn Profile"><i
+										class="fab fa-linkedin-in highlight-color"></i></a> <a
+									href="https://github.com/riderjensen" target="_blank"
+									title="Rider Jensen's Github Profile"><i
+										class="fab fa-github highlight-color"></i></a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="container-fluid">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 offset-md-1 col-sm-12">
+						<h2 class="text-center">About Me</h2>
+						<p>I am a junior fullstack application developer looking to increase my skillset. I fell into
+							web
+							development about 4 years ago after completing and associate's degree in History and
+							Political
+							Science. I found that not only was I technically minded but many of my past experiences had
+							me
+							very customer service oriented. Helping people is something that I have always loved to do
+							and
+							web development has allowed me to fulfill this purpose in my life while working with
+							technology
+							that I love.</p>
+						<p>Outside of work, I like to work on my own personal projects, most of which are featured on my
+							<a href="https://github.com/riderjensen">GutHub</a>. Among my favorites is a URL shortner
+							that
+							I built open source and easily customizable. The idea came from a PHP URL shortner that is
+							called <a href="https://yourls.org" target="_blank">YOURLS</a>. I wanted to create something
+							similar that anyone could use and that would be available to the community and community
+							contribution. The most challenging part for me was to figure out how to have global
+							variables in
+							my main file (so users would only have to edit one page to get the application up and
+							running)
+							and also use these variables through out the application.</p>
+						<p>Besides coding, I love playing video games and playing DND with my friends. I play a lot of
+							RPGs
+							and I have sunk an embarassingly large amount of hours into World of Warcraft. I also enjoy
+							my
+							Xbox One though I usually use it to turn on netflix and have sound playing while I work on
+							things on my laptop.</p>
+					</div>
+				</div>
+				<!--End Container -->
+			</div>
+		</div>
+		<!--End Container Fluid -->
+
+		<div class="container" id="projects">
+			<h2 class="text-center">Projects</h2>
+
+			<div class="row">
+				<div class="col-md-6">
+					<h3><i class="fas fa-server"></i> Fullstack</h3>
+					<p><a href="https://github.com/riderjensen?tab=projects" target="_blank">Usability Testing
+							Project</a>
+					</p>
+					<p><a href="https://github.com/riderjensen?tab=projects" target="_blank">Vue GrapqhQL and Rest
+							Project</a>
+					</p>
+					<p><a href="https://github.com/riderjensen/PHP---MySQL/tree/master/movieSite%20-%20cap"
+							target="_blank">PHP and MySQL Movie Theater
+							Listings</a></p>
+
+				</div>
+				<div class="col-md-6">
+					<p>Node with express and MongoDB are my bread in butter with application creation.
+						The server that is currently running this page is using Node because not only is this home to my
+						portfolio but I have also built a RESTful API and a GraphQL API on this server (see /api and
+						/sub
+						respectivley or look at the documentation on my Github). </p>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h3><i class="fab fa-react"></i> Frontend/CMS</h3>
+					<p><a href="https://github.com/riderjensen/api-frontend-react" target="_blank">React with Netlify
+							CI</a>
+					</p>
+					<p><a href="https://github.com/riderjensen/vue-final-rider" target="_blank">Vue with Netlify
+							CI</a></p>
+					<p><a href="https://github.com/riderjensen/chatServer" target="_blank">Bootstrap with a connected
+							backend</a></p>
 				</div>
 				<div class="col-md-6 specMarg altMarginTwo">
-					<p class="previousWork">Being able to with pre-established systems is just as important as being
-						able to branch
-						out and learn new technologies. Often times, I will be developing using pieces of old code or
-						needing to make new
-						integrations. Being able to seamlessly move into a new CMS is important for a workflow and what
-						I have done with
-						the CMS used at UVU, combined with Bootstrap. Deployment using Netlify for quick showings to a
-						client is also a
-						very useful tool.</p>
+					<p>I have plenty of experience with frontend frameworks/libraries such as Vue, React, and BootStrap.
+						These libraries pair incredibly well with Node applications that are RESTful services and since
+						being introduced to this application structure, I have built almost all my applications in it.
+						This
+						includes migrating my senior project over from an MVC to a RESTful service.</p>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="container">
-		<div class="row" style="padding-bottom: 40px;">
-			<div class="col-md-6 regMargTop">
-				<h3><span class="glyphicon glyphicon-eye-open glyphPrevWork" aria-hidden="true"></span> Mobile Apps</h3>
-				<h4><a href="https://play.google.com/store/apps/developer?id=Rider+Jensen" target="_blank">My App Store
-						Link</a></h4>
-				<h4><a href="https://github.com/riderjensen/leanlist" target="_blank">Group list management with
-						firebase</a></h4>
-				<h4><a href="https://github.com/riderjensen/my_flutter_app" target="_blank">Simple Trading App</a></h4>
-			</div>
-			<div class="col-md-6 regMargTop largeBottomMargin">
-				<p class="previousWork">I create both Andriod and iOS applications using Flutter, a google framework
-					that compiles
-					down to the base languages of Java and Swift. Self-taught but eager to learn more how to leverage
-					built in
-					capabilities of phone in greater and better ways. Already in my applications I have used firebase to
-					store
-					information, complete user authentication, and interact with my app.</p>
-			</div>
-			<br>
-			<a id="people"></a>
-		</div>
-	</div>
-	<!--End Container -->
 
-
-
-
-	<div class="container-fluid social">
-		<div class="paralaxPic2" id="paralaxPic2">
-			<div class="container">
-				<div class="row largeBottomMargin largeTopMargin">
-					<div class="col-md-1 col-sm-0">
-					</div>
-					<div class="col-md-10 col-sm-12 ourFirmBackground aboutMeText">
-						<h1 class="alignCenter aboutMeHeading">About Me</h1>
-						<br>
-						<p class="aboutMe">Currently in school at Utah Valley University, I am pursuing a degree in Web
-							Development
-							with an emphasis in Web and App development. My current GPA is at a 3.87. I earned an
-							Associates Degree
-							in History and Political Science for UVU in 2016. I am involved with the UVU Honors Program
-							and I have
-							recieved two scholarships from them. In 2013, I was also awarded a four year scholarship
-							from UVU for my
-							exemplary performance in high school and on the ACT.</p>
-						<br>
-
-						<p class="aboutMe">While I will have a degree, I believe myself to be mostly self-taught. Going
-							above and beyond
-							what I was required to learn in school, I have develed much deeper into things like data
-							modeling, user
-							authentication, and securing server information. Learning is something that I will never be
-							done with because I
-							have a passion to further my knowledge. I want to grow myself while being able to provide
-							the best benefits and
-							service to my clients.</p>
-						<br>
-						<p class="aboutMe">Deployment is an area where I would like to grow my skill set. I have
-							deployed a number of
-							websites but only a few web applications. Rolling deployment is still a new thing to me
-							though I really enjoy
-							creating, getting feedback, and then sending small updates to my applications. I also enjoy
-							working on
-							development only servers and then deploying to live servers.</p>
-
-					</div>
-					<div class="col-md-1 col-sm-0">
-
-					</div>
-				</div>
-			</div>
-			<!--End Container -->
-		</div>
-	</div>
-	<!--End Container Fluid -->
-
-	<a id="practice"></a>
-	<div class="container-fluid">
 		<div class="container">
-			<div class="row medTopMargins">
-				<br><br>
-				<div class="col-md-12">
-
-					<h1 style="text-align: center;">Skills</h1>
+			<div class="row">
+				<div class="col-md-6">
+					<h3><i class="fas fa-mobile-alt"></i> Mobile Apps</h3>
+					<p><a href="https://play.google.com/store/apps/developer?id=Rider+Jensen" target="_blank">My App
+							Store
+							Link</a></p>
+					<p><a href="https://github.com/riderjensen/leanlist" target="_blank">Group list management with
+							firebase</a></p>
+					<p><a href="https://github.com/riderjensen/my_flutter_app" target="_blank">Simple Trading App</a>
+					</p>
 				</div>
-			</div>
-			<div class="row  medBottomMargin">
-
-				<div class="col-sm-4 col-xs-12">
-					<ul class="pracAreas">
-						<li>
-							<h3>Git development</h3>
-							<p>Experienced in git workflow.</p>
-						</li>
-						<li>
-							<h3>Node.js</h3>
-							<p>Experienced with Node.js application create and workflow</p>
-						</li>
-						<li>
-							<h3>NoSQL Databses</h3>
-							<p>Proficient in Mongo and NoSQL DBs.</p>
-						</li>
-						<li>
-							<h3>HTML</h3>
-							<p>Proficient in HTML and front-end frameworks like Bootstrap.</p>
-						</li>
-						<li>
-							<h3>CSS</h3>
-							<p>Proficient in CSS as well as SASS/SCSS/Precompiled CSS.</p>
-						</li>
-						<li>
-							<h3>UI/UX Design</h3>
-							<p>Iterating on ideas, project briefs, and mock-ups (including working prototype).</p>
-						</li>
-
-					</ul>
+				<div class="col-md-6 regMargTop largeBottomMargin">
+					<p>I create both Andriod and iOS applications using Flutter, a google framework
+						that compiles
+						down to the base languages of Java and Swift. I am also learning React Native in my spare time.
+						Already in my applications I have used firebase to
+						store
+						information, complete user authentication, and interact with my app.</p>
 				</div>
-				<div class="col-sm-4 col-xs-12">
-					<ul class="pracAreas">
-						<li>
-							<h3>Flutter</h3>
-							<p>Proficient in App creation</p>
-						</li>
-						<li>
-							<h3>Dart</h3>
-							<p>Proficient in using and importing.</p>
-						</li>
-
-						<li>
-							<h3>PHP</h3>
-							<p>Proficient in using PHP.</p>
-						</li>
-						<li>
-							<h3>Project Management</h3>
-							<p>Experienced in creating, planning, and execution.</p>
-						</li>
-						<li>
-							<h3>C#</h3>
-							<p>Proficient in C# including methods, classes, and interaction on Unity.</p>
-						</li>
-						<li>
-							<h3>Ruby</h3>
-							<p>Some experience with Ruby and building programs.</p>
-						</li>
-
-					</ul>
-				</div>
-				<div class="col-sm-4 col-xs-12">
-					<ul class="pracAreas">
-						<li>
-							<h3>Vue.js</h3>
-							<p>Proficient in frontend frameworks like Vue.js.</p>
-						</li>
-						<li>
-							<h3>SQL Databases</h3>
-							<p>Proficient in SQL DBs and tools like Sequalize.</p>
-						</li>
-
-						<li>
-							<h3>Data modeling</h3>
-							<p>Creating, storing, and mangaing data relations.</p>
-						</li>
-						<li>
-							<h3>JavaScript</h3>
-							<p>Experienced in JavaScript language including JSON and APIs.</p>
-						</li>
-
-						<li>
-							<h3>Software Onboarding</h3>
-							<p>Experience in creating onboarding guides to help employees be ready to use software.</p>
-						</li>
-						<li>
-							<h3>C++</h3>
-							<p>Experience with classes, file I/O, and exceptions.</p>
-						</li>
-					</ul>
-					<a id="contact"></a>
-				</div>
-
+				<br>
 			</div>
 		</div>
 		<!--End Container -->
-	</div>
-	<!--End Container Fluid -->
 
 
 
-	<div class="container-fluid">
-		<div class="paralaxPic3" id="paralaxPic3">
+
+
+
+		<div class="container-fluid" id="skills">
 			<div class="container">
 				<div class="row">
+					<div class="col-12">
+						<h2 class="text-center">Skills</h2>
 
-					<br><br>
-					<div class="col-md-12">
-						<h3 class="alignCenter" id="contactHeading">Contact</h3>
+
+						<p>HTML</p>
+						<p>CSS</p>
+						<p>JavaScript</p>
+						<p>UI/UX Design</p>
+						<p>Git development</p>
+						<p>Node.js</p>
+						<p>NoSQL Databses</p>
+						<p>Flutter</p>
+						<p>Dart</p>
+						<p>PHP</p>
+						<p>Project Management</p>
+						<p>C#</p>
+						<p>Ruby</p>
+						<p>Vue.js</p>
+						<p>SQL Databases</p>
+						<p>Data modeling</p>
+						<p>Software Onboarding</p>
+						<p>C++</p>
+
 					</div>
+				</div>
+				<!--End Container -->
+			</div>
+			<!--End Container Fluid -->
+
+
+
+
+			<div class="container padding-bottom-50" id="contact">
+				<div class="row text-center padding-bottom-50 padding-bottom-50 title-section">
+					<h2 class="margin-auto">Contact Me</h2>
 				</div>
 				<div class="row">
-					<br>
-					<div class="col-md-12">
-						<form class="form-horizontal" action="https://formspree.io/riderjensen@gmail.com" method="POST">
-							<fieldset>
-								<div class="form-group">
-									<label class="col-sm-2 control-label">Name*</label>
-									<div class="col-sm-8">
-										<input type="text" name="Name" value="" class="form-control"
-											placeholder="Full Name" required>
-									</div>
-								</div>
-							</fieldset>
-
-							<fieldset class="website">
-								<div class="form-group">
-									<label class="col-sm-2 control-label">Email*</label>
-									<div class="col-sm-8">
-										<input type="text" class="email" name="email" value="" class="form-control"
-											placeholder="youremail@domain.com">
-									</div>
-								</div>
-							</fieldset>
-
-							<fieldset class="website">
-								<div class="form-group">
-									<label class="col-sm-2 control-label">Website*</label>
-									<div class="col-sm-8">
-										<input type="text" id="website" name="website" value="" class="form-control">
-									</div>
-								</div>
-							</fieldset>
-
-							<fieldset>
-								<div class="form-group">
-									<label class="col-sm-2 control-label">Email*</label>
-									<div class="col-sm-8">
-										<input type="text" name="userEmail" value="" class="form-control"
-											placeholder="youremail@domain.com" required>
-									</div>
-								</div>
-							</fieldset>
-
-							<fieldset>
-								<div class="form-group">
-									<label class="col-sm-2 control-label">Phone*</label>
-									<div class="col-sm-8">
-										<input type="text" name="Phone" value="" class="form-control"
-											placeholder="801-854-9212" required>
-									</div>
-								</div>
-							</fieldset>
-
-							<fieldset>
-								<div class="form-group">
-									<label class="col-sm-2 control-label">Subject*</label>
-									<div class="col-sm-8">
-										<input type="text" name="Subject" value="" class="form-control"
-											placeholder="Enter Your Subject Here" required>
-									</div>
-								</div>
-							</fieldset>
-
-							<fieldset>
-								<div class="form-group">
-									<label class="col-sm-2 control-label">Message*</label>
-									<div class="col-sm-8">
-										<textarea rows="4" name="Comments" class="form-control"
-											placeholder="Please enter some basic information as to what this project is"
-											required></textarea>
-										<p>*required fields</p>
-									</div>
-								</div>
-							</fieldset>
-							<input class="btn btn-primary btn-lg subButton" type="submit" name="submit" value="Submit">
-							<input type="hidden" name="subject" value="Contact Us Form">
+					<div class="col-md-8 offset-md-2 col-12">
+						<form action="https://formspree.io/riderjensen@gmail.com" method="POST">
+							<div class="form-group">
+								<label for="exampleInputEmail1">Full name<span class="highlight-color">*</span></label>
+								<input type="text" required class="form-control" name="name" placeholder="Enter name">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputEmail1">Email address<span
+										class="highlight-color">*</span></label>
+								<input type="email" required class="form-control" name="_replyto"
+									placeholder="Enter email">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputEmail1">Telephone</label>
+								<input type="tel" class="form-control" name="telephone" placeholder="999-999-9999">
+							</div>
+							<div class="form-group">
+								<label for="exampleFormControlTextarea1">What is your message? </label>
+								<textarea class="form-control" rows="3"
+									placeholder="We would like to learn more about your services..."></textarea>
+							</div>
+							<input type="submit" class="btn btn-primary" value="Submit">
 						</form>
-						<br>
+
 					</div>
 				</div>
+
+			</div>
+
+			<div class="container-fluid">
+				<footer>
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12 col-md-4 text-center">
+								Rider Jensen &copy; 2019
+							</div>
+						</div>
+					</div>
+				</footer>
 			</div>
 		</div>
 	</div>
 
-	<div class="container">
-		<div class="row fixingWidth siteWidth">
-			<br>
-			<div class="row">
-				<br>
-
-				<hr>
-				<div class="col-md-4">
-					<div>
-						<p>&copy; Rider Jensen 2019</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div>
-
-					</div>
-				</div>
-				<div class="col-md-4">
-					<a href="#top" class="alignCenter">Back To Top</a>
-
-				</div>
-			</div>
-		</div>
-	</div>
 	<!--/container -->
-	<script src="https://intense-plains-47179.herokuapp.com/js?id=5cafeff7fe03410017fe252a" id="usable"></script>
-	<script>
-		window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+	<!-- <script src="https://intense-plains-47179.herokuapp.com/js?id=5cafeff7fe03410017fe252a" id="usable"></script> -->
+	<!-- Scripts -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
 	</script>
-
-	<script src="/js/vendor/bootstrap.min.js"></script>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-
-
-	<script src="/js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+	</script>
+	<script src="js/bootstrap.min.js" type="text/javascript">
+	</script>
+	<script src="js/particles.min.js"></script>
+	<script>
+		window.onload = function () {
+			Particles.init({
+				selector: '.background',
+				color: ['#4EA64D', '#787879', '#E6E6FA', 'F0A830'],
+				connectParticles: true
+			});
+		};
+	</script>
 </body>
 
 </html>
