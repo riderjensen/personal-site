@@ -19,6 +19,14 @@ html {
     padding-bottom: 50px;
 }
 
+.padding-top-20 {
+    padding-top: 20px;
+}
+
+.padding-bottom-20 {
+    padding-bottom: 20px;
+}
+
 .width-100 {
     width: 100%;
 }
@@ -204,7 +212,7 @@ footer {
 
 
     .jumbotron .container {
-        margin-top: 20vh;
+        margin-top: 15vh;
     }
 
     .jumbotron .container * {
@@ -212,7 +220,7 @@ footer {
     }
 
     .jumbotron {
-        height: 60vh;
+        height: 70vh;
     }
 
     /* ======= End Header ====== */
