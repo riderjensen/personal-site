@@ -1,341 +1,255 @@
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
 html {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
-body {
-	font-family: 'Roboto', sans-serif;
+/* ======= Start General Styles ======= */
+.text-center {
+    text-align: center;
 }
 
-.fixingWidth {
-	margin-left: 5%;
-	margin-right: 5%;
+.margin-auto {
+    margin: auto;
 }
 
-.hidden {
-	display: hidden;
+.padding-top-50 {
+    padding-top: 50px;
 }
 
-.pracAreas {
-	padding: 20px;
-	margin: 10px;
-	list-style-type: square;
+.padding-bottom-50 {
+    padding-bottom: 50px;
 }
 
-.pracAreas li {
-	padding: 10px;
-	font-size: 3rem;
-
+.width-100 {
+    width: 100%;
 }
 
-.pracAreas li p {
-	padding-top: 20px;
-	color: black;
-	font-size: 10pt;
+iframe {
+    width: 100%;
+    height: 250px;
 }
 
-.logo {
-	width: 150px;
+.media i {
+    font-size: 30px;
+    margin: 10px;
 }
 
-.atPhoto {
-	padding: 20px;
+.secondary-color {
+    color: #4EA64D
 }
 
-
-.fixTop {
-	margin: auto;
-	margin-top: 100px;
-	padding: 10px;
+.highlight-color {
+    color: #F0A830;
 }
 
-.headerCont {
-	margin-top: 200px;
-	height: 700px;
-
+.text-white {
+    color: #fff;
 }
 
-.darkText {
-	color: black;
+/* ======= End General Styles ======= */
+
+
+/* ====== overriders ====== */
+.navbar-light .navbar-brand {
+    color: #4EA64D;
 }
 
-.buttonFixTop {
-	display: block;
-	margin: auto;
-	width: 125px;
-	height: 55px;
-	border-radius: 10px;
-	border: 2px solid #ffffff;
-	background: rgba(0, 0, 0, 1);
-	color: white;
-	text-align: center;
+.navbar-light .navbar-brand:hover {
+    color: #358D34;
 }
 
-.buttonFixTop:hover {
-	background-color: #808080;
+.btn-primary {
+    background-color: hsl(38, 86%, 56%);
+    padding: 10px 20px;
+    border: 2px solid rgba(0, 0, 0, 0.0);
+    color: #000;
+    border-radius: 0;
+    transition: all ease-in 0.2s;
 }
 
-.largeTopMargin {
-	margin-top: 20px;
-
+.btn-primary:hover {
+    background-color: rgba(0, 0, 0, 0.0);
+    color: #fff;
+    border: 2px solid hsl(38, 86%, 56%);
 }
 
-.largeBottomMargin {
-	margin-bottom: 20px;
+.btn-secondary {
+    border: 2px solid hsl(38, 86%, 56%);
+    background-color: rgba(0, 0, 0, 0.0);
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 0;
+    margin-left: 10px;
+    transition: all ease-in 0.2s;
 }
 
-.medTopMargin {
-	margin-top: 75px;
-
+.btn-secondary:hover {
+    background-color: hsl(38, 86%, 56%);
+    color: #000;
+    border: 2px solid rgba(0, 0, 0, 0.0);
 }
 
-.medBottomMargin {
-	margin-bottom: 75px;
+a.secondary-color:hover {
+    color: #358D34;
 }
 
-.socialConnection {
-	margin-top: 35px;
+/* ======= Start Header ====== */
+
+.jumbotron {
+    border-top: 4px solid #F0A830;
+    position: relative;
+    height: auto;
+    background-image: url('../img/main-header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    /* enable for parallax */
+    /* background-attachment: fixed; */
 }
 
-.regMargBot {
-	margin-bottom: 50px;
+.jumbotron:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    z-index: 0;
 }
 
-.regMargTop {
-	margin-top: 50px;
+.jumbotron .container * {
+    z-index: 5;
+    margin-top: 20px;
 }
 
-.specMarg {
-	margin-top: 50px;
-	margin-bottom: 50px;
+.jumbotron .container {
+    margin-top: 50px;
 }
 
-.paralaxPic {
-	/* The image used */
-	background-image: url("../img/timp.jpg");
-
-	/* Create the parallax scrolling effect */
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-
+.lead {
+    font-size: 25px;
 }
 
-.paralaxPic2 {
-	/* The image used */
-	background-image: url("../img/sAway.jpg");
-
-	/* Create the parallax scrolling effect */
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	color: white;
-
-}
-
-.paralaxPic3 {
-	/* The image used */
-	background-image: url("../img/invLaw.jpg");
+/* ======= End Header ====== */
 
 
-	/* Create the parallax scrolling effect */
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	color: white;
+/* ====== Start Card Styes ====== */
+.card-body .title {
+    text-align: center;
+    font-size: 14px;
 
 }
 
-.social {
-	background-color: #F5F5F5;
-}
-
-/*Phone */
-@media only screen and (max-width:459px) {
-	.navbar-default {
-		opacity: 1;
-	}
-
-	.paralaxPic {
-		/* Set a specific height */
-		height: 800px;
-		width: 100%;
-
-	}
-
-	.paralaxPic2 {
-
-		/* Set a specific height */
-		height: 1850px;
-		width: 100%;
-
-	}
-
-	.paralaxPic3 {
-
-		height: 700px;
-		width: 100%;
-	}
-
-	.headerCont {
-		color: rgba(255, 255, 255, 1);
-		margin-top: 50px;
-		height: 700px;
-	}
-
-	.specMarg {
-		margin-top: 0px;
-		margin-bottom: 0px;
-	}
-
-	.altMarginOne {
-		margin-top: 100px;
-	}
-
-	.altMarginTwo {
-		margin-bottom: 100px;
-	}
+.card-title {
+    text-align: center;
+    margin: 0;
 
 }
 
-/*Tablet */
-@media only screen and (min-width: 460px) and (max-width:991px) {
-	.paralaxPic {
-		/* Set a specific height */
-		height: 100%;
-		width: 100%;
-	}
+/* ====== End Card Styes ====== */
 
-	.paralaxPic2 {
-		/* The image used */
 
-		height: 100%;
-		width: 100%;
+/* ====== Start Main Selling Points ====== */
 
-	}
-
-	.paralaxPic3 {
-		height: 700px;
-		width: 100%;
-	}
-
-	.specMarg {
-		margin-top: 0px;
-		margin-bottom: 0px;
-	}
-
-	.altMarginOne {
-		margin-top: 100px;
-	}
-
-	.altMarginTwo {
-		margin-bottom: 100px;
-	}
+.main-icon i {
+    font-size: 25px;
 }
 
-/*Desktop */
-@media only screen and (min-width:992px) {
-	.paralaxPic {
-		/* Set a specific height */
-		height: 1000px;
-		width: 100%;
-
-	}
-
-	.paralaxPic2 {
-		/* Set a specific height */
-		height: 100%;
-		width: 100%;
 
 
-	}
+/* ======= Start Staff Cards ======= */
 
-	.paralaxPic3 {
-		height: 550px;
-		width: 100%;
-	}
+.card.staff {
+    padding-top: 60px;
+    margin-top: 90px;
+    padding-bottom: 20px;
+    height: auto;
+}
+
+.card.staff .cover-image {
+    position: absolute;
+    top: -70px;
+    left: 0;
+    right: 0;
+    width: 100px;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.card.staff .cover-image img {
+    width: 100%;
+}
+
+.card.staff .connect {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+}
+
+.background {
+    z-index: -1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* ======= End Staff Cards ======= */
+
+/* ====== Start Footer ====== */
+footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* ====== End Footer ====== */
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    /* ======= Start Header ====== */
+
+
+
+    .jumbotron .container {
+        margin-top: 20vh;
+    }
+
+    .jumbotron .container * {
+        margin-top: 0px;
+    }
+
+    .jumbotron {
+        height: 60vh;
+    }
+
+    /* ======= End Header ====== */
 
 }
 
-.ourFirmBackground {
-	font-size: 15px;
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .card.staff {
+        margin-top: 0px;
+        height: 100%;
+    }
+
+    iframe {
+        height: 450px;
+    }
 }
 
-.titleCard {
-	margin-top: 150px;
-	font-size: 60px;
-}
-
-.subButton {
-	display: block;
-	margin: auto;
-	width: 100px;
-	height: 50px;
-	border-radius: 10px;
-	border: 2px solid #ffffff;
-	background: rgba(0, 0, 0, 1);
-	color: white;
-	text-align: center;
-}
-
-.subButton:hover {
-	background-color: #808080;
-}
-
-.navbar-left li a {
-	margin-top: 10px;
-	font-size: 14pt;
-	padding: 10px;
-}
-
-.navbar-right li a {
-	margin-top: 10px;
-	font-size: 14pt;
-	padding: 10px;
-}
-
-.glyphPrevWork {
-	font-size: 30px;
-}
-
-.aboutMe {
-	font-size: 18px;
-}
-
-.previousWork {
-	font-size: 16px;
-}
-
-form #website {
-	display: none;
-}
-
-.website {
-	display: none;
-}
-
-.socMedIcon {
-	width: 40px;
-}
-
-.aboutMeHeading {
-	text-shadow: 2px 1px #000;
-}
-
-.control-label {
-	color: #fff;
-}
-
-#contactHeading {
-	color: #fff;
-}
-
-.alignCenter {
-	text-align: center;
-}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
