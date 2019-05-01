@@ -29,8 +29,5 @@ jobs:
 
       # run tests!
       - run: npm test
-      - add_ssh_keys:
-          fingerprints:
-            - 'SHA256:5vWbdfq5b5MDl22vsV8NoMoKCYPL+0KDGNLAzZpFTwQ'
       - run: ssh-keyscan 138.68.27.204 >> ~/.ssh/known_hosts
-      - run: ssh -v $DROPLET_USER@$DROPLET_IP "cd ~/Personal-Site; ./circle_deployer.sh"        
+      - run: ssh -v $DROPLET_USER@$DROPLET_IP -y "cd ~/Personal-Site; ./circle_deployer.sh"        
