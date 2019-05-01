@@ -29,5 +29,4 @@ jobs:
 
       # run tests!
       - run: npm test
-      - run: echo 'deploying master branch'
-      - run: ssh -v $DROPLET_USER@$DROPLET_IP "cd ~/Personal-Site; ./circle_deployer.sh"        
+      - run: ssh -v $DROPLET_USER@$DROPLET_IP "cd ~/Personal-Site; ./circle_deployer.sh -y"        
