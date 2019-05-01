@@ -32,5 +32,4 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - '79:27:56:24:24:6f:be:b5:6a:ee:1e:80:0e:76:33:80'
-      - run: ssh-keyscan 138.68.27.204 >> ~/.ssh/known_hosts
-      - run: ssh -v $DROPLET_USER@$DROPLET_IP -y "cd ~/Personal-Site; ./circle_deployer.sh"        
+      - run: ssh -v $DROPLET_USER@$DROPLET_IP
