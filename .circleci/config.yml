@@ -29,8 +29,27 @@ jobs:
 
       # run tests!
       - run: npm test
+
+
+  deploy:
+    machine:
+      enabled: true
+    steps:
       - add_ssh_keys:
           fingerprints:
             - '79:27:56:24:24:6f:be:b5:6a:ee:1e:80:0e:76:33:80'
       - run: ssh-keyscan $DROPLET_IP >> ~/.ssh/known_hosts
-      - run: ssh -v $DROPLET_USER@$DROPLET_IP
+      - run: ssh -v $DROPLET_USER@$DROPLET_IP "cd /home/deploy/ && pm2 delete app && rm -rf Personal-Site && git clone https://github.com/riderjensen/Personal-Site && cd Personal-Site && npm install && npm start"
+
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
