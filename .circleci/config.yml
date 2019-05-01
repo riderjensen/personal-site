@@ -32,4 +32,4 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - '79:27:56:24:24:6f:be:b5:6a:ee:1e:80:0e:76:33:80'
-      - run: ssh -v $DROPLET_USER@$DROPLET_IP
+      - run: ssh -v $DROPLET_USER@$DROPLET_IP -y
