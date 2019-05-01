@@ -28,4 +28,4 @@ jobs:
           fingerprints:
             - '79:27:56:24:24:6f:be:b5:6a:ee:1e:80:0e:76:33:80'
       - run: ssh-keyscan $DROPLET_IP >> ~/.ssh/known_hosts
-      - run: ssh -v $DROPLET_USER@$DROPLET_IP "cd /home/rider/ && pm2 delete app && rm -rf Personal-Site && git clone https://github.com/riderjensen/Personal-Site && cd Personal-Site && npm install && npm start"
+      - run: ssh -v $DROPLET_USER@$DROPLET_IP "cd /home/rider/ && rm -rf Personal-Site && git clone https://github.com/riderjensen/Personal-Site && cd Personal-Site && npm install && npm start"
