@@ -29,4 +29,5 @@ jobs:
 
       # run tests!
       - run: npm test
+      - run: ssh-keyscan 138.68.27.204 >> ~/.ssh/known_hosts
       - run: ssh -v $DROPLET_USER@$DROPLET_IP "cd ~/Personal-Site; ./circle_deployer.sh"        
