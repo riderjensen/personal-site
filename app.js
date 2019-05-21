@@ -40,4 +40,4 @@ app.get('/', (req, res) => res.render('index'));
 
 app.get('*', (req, res) => res.redirect('/'))
 
-app.listen(PORT, () => console.log(`Example app listening on port ${port}!`));
+app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`));
