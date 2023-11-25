@@ -1,11 +1,11 @@
 import BasePage from "./Layout/BasePage";
 import BlogPreview from "./Home/BlogPreview";
 import CallToAction from "./Home/CallToAction";
-import Features from "./Home/Features";
-import Goals from "./About/Goals";
 import Hero from "./Home/Hero";
 import PreviewTile from "./Home/PreviewTile";
-import Products from "./About/Products";
+import Projects from "./Home/Projects";
+import Quotes from "./About/Quotes";
+import Interests from "./About/Interests";
 import Statement from "./About/Statement";
 import Timeline from "./About/Timeline";
 
@@ -13,11 +13,11 @@ export {
   BasePage,
   BlogPreview,
   CallToAction,
-  Features,
-  Goals,
   Hero,
+  Interests,
   PreviewTile,
-  Products,
+  Projects,
+  Quotes,
   Statement,
   Timeline,
 };

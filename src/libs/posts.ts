@@ -69,7 +69,7 @@ export async function getPostData(id: string): Promise<Post> {
       h3: "text-lg py-4 font-semibold",
       code: "bg-gray-200 rounded-md px-1",
       pre: "p-4 bg-gray-200 rounded-lg leading-snug",
-      img: "m-auto"
+      img: "m-auto",
     })
     .process(matterResult.content);
   const contentHtml = processedContent.toString();

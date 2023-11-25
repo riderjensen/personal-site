@@ -3,13 +3,12 @@ import {
   BasePage,
   BlogPreview,
   CallToAction,
-  Features,
   Hero,
+  Projects,
 } from "@components";
 import { PostPreview } from "@types";
 
 import { getSortedPostsData } from "../src/libs/posts";
-
 
 type Props = {
   postPreviews: PostPreview[];
@@ -41,7 +40,7 @@ export default function Home({ postPreviews }: Props) {
       metaImage={metaImage}
     >
       <Hero />
-      <Features />
+      <Projects />
       <CallToAction />
       <BlogPreview postPreviews={postPreviews} />
     </BasePage>

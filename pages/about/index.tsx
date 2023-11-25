@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  BasePage,
-  Goals,
-  Products,
-  Statement,
-  Timeline,
-} from "@components";
+import { BasePage, Interests, Quotes, Statement, Timeline } from "@components";
 
 const title = "About Me | Riderjensen.com";
 const meta =
@@ -23,8 +17,8 @@ export default function Index() {
       metaImage={metaImage}
     >
       <Statement />
-      <Goals />
-      <Products />
+      <Quotes />
+      <Interests />
       <Timeline />
     </BasePage>
   );

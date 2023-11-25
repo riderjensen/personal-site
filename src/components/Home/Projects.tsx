@@ -7,7 +7,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
-export default function Features() {
+export default function Projects() {
   return (
     <div className="container mx-auto bg-white">
       <div className="py-12 sm:py-16 lg:py-20">
@@ -40,7 +40,7 @@ export default function Features() {
                     rewrote an open source package to include typescript support
                     on an HTML plugin syntax tree ecosystem since the previous
                     author was not interested. To date, it is my most downloaded
-                    package on{" "}
+                    package on
                     <Link
                       className="underline text-indigo-500"
                       target="_blank"
@@ -48,8 +48,8 @@ export default function Features() {
                       href="https://www.npmjs.com/package/rehype-class-names"
                     >
                       NPM
-                    </Link>{" "}
-                    and it is listed as a recommended by{" "}
+                    </Link>
+                    and it is listed as a recommended by
                     <Link
                       className="underline text-indigo-500"
                       target="_blank"
@@ -58,7 +58,7 @@ export default function Features() {
                     >
                       Rehype
                     </Link>
-                    . It's also used by{" "}
+                    . It&apos;s also used by
                     <Link
                       className="underline text-indigo-500"
                       target="_blank"
@@ -66,10 +66,10 @@ export default function Features() {
                       href="https://github.com/nasa-gcn/gcn.nasa.gov"
                     >
                       NASA
-                    </Link>{" "}
-                    (Look mom, I'm famous!). Contributing to open source, no
-                    matter how small, is important and I am proud that something
-                    I wrote could be user by others in any capacity.{" "}
+                    </Link>
+                    (Look mom, I&apos;m famous!). Contributing to open source,
+                    no matter how small, is important and I am proud that
+                    something I wrote could be user by others in any capacity.
                     <Link
                       className="underline text-indigo-500"
                       target="_blank"
@@ -93,8 +93,8 @@ export default function Features() {
                     Remember your first online gaming experience where a bunch
                     of nerds who play 24/7 gave you the beat down of a lifetime?
                     Well those nerds need money to play competitively since
-                    prize pools just don't cut it. This project was a Next.js
-                    frontend for the{" "}
+                    prize pools just don&apos;t cut it. This project was a
+                    Next.js frontend for the
                     <Link
                       className="underline text-indigo-500"
                       target="_blank"
@@ -102,13 +102,13 @@ export default function Features() {
                       href="https://github.com/riderjensen/voting-back"
                     >
                       Neutral Stack
-                    </Link>{" "}
+                    </Link>
                     backend which let users sign up and vote for the direction
                     of the team based on their overall contribution to a
                     crowdfunding initiative. Based on their given amount, users
                     can vote in polls that dictate the direction of the e-sports
                     team, allowing real people to shape the future instead of a
-                    faceless corporation.{" "}
+                    faceless corporation.
                     <Link
                       className="underline text-indigo-500"
                       target="_blank"
@@ -134,7 +134,7 @@ export default function Features() {
                     a tool for you). This project built with Node.js and mySQL
                     includes poll creation, user voting, and an API that is easy
                     to interact. Now you can explicitly tell people their voice
-                    means less than others'.{" "}
+                    means less than others&apos;.
                     <Link
                       className="underline text-indigo-500"
                       target="_blank"
@@ -156,10 +156,11 @@ export default function Features() {
                   </p>
                   <p className="mt-2 text-base leading-7 text-gray-600">
                     Lean List was my first foray into mobile development and
-                    while I am no expert, I would be lying if I said I didn't
-                    enjoy it. Built with Flutter and Firebase, it's a native
-                    mobile application that allows for multiple people to
-                    create, keep, and edit lists with other people.{" "}
+                    while I am no expert, I would be lying if I said I
+                    didn&apos;t enjoy it. Built with Flutter and Firebase,
+                    it&apos;s a native mobile application that allows for
+                    multiple people to create, keep, and edit lists with other
+                    people.
                     <Link
                       className="underline text-indigo-500"
                       target="_blank"
