@@ -1,0 +1,6 @@
+Sitemap: https://riderjensen.com/sitemap.xml
+Sitemap: https://www.riderjensen.com/sitemap.xml
+
+# Allow all crawlers
+User-agent: *
+Allow: /
