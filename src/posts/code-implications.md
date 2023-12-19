@@ -3,11 +3,12 @@
   date: "2023-11-24"
   excerpt:
     "I set a trap for myself a few months ago and only sprung it while getting this website up and running. Code we write can have implications and unintended consequences if we are not careful."
-  img: "posts/half-open-laptop.jpg"
-  alt: "Laptop with a half open lid. Photo by Ales Nesetril on Unsplash"
+  img: "posts/code-implications/half-open-laptop.jpg"
+  alt: "Laptop with a half open lid sits on a desk"
 ---
 
-![Laptop with a half open lid](/images/posts/half-open-laptop.jpg)
+![Laptop with a half open lid](/images/posts/code-implications/half-open-laptop.jpg)
+*Photo by [Ales Nesetril](https://unsplash.com/@alesnesetril?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on Unsplash.*
 
 I am not much for introductions and even though this is the first post (perhaps that holds some significance?), I don't have much content prepared though I do have a few articles in the works. Normally I would just publish the updated site with a message under the `blog` section saying "No posts available" and write one next week but I ran into an issue while trying do this which I have decided to make the subject of my first blog post.
 

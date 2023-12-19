@@ -65,11 +65,17 @@ export async function getPostData(id: string): Promise<Post> {
     .use(rehypeStringify)
     .use(addClasses, {
       p: "py-3",
-      h2: "text-xl py-4 font-semibold",
-      h3: "text-lg py-4 font-semibold",
-      code: "bg-gray-200 rounded-md px-1",
+      h2: "text-2xl py-4 font-semibold",
+      h3: "text-xl py-4 font-semibold",
+      h4: "text-lg py-4 font-semibold",
+      a: "underline text-indigo-700",
+      code: "bg-gray-200 rounded-md",
       pre: "p-4 bg-gray-200 rounded-lg leading-snug overflow-y-auto",
       img: "m-auto",
+      li: "list-decimal ml-8",
+      blockquote: "px-6",
+      // Workaround for no captions in markdown
+      em: "text-center block"
     })
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
