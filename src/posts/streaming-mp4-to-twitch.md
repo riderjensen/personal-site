@@ -142,7 +142,7 @@ which equals about `604 GB` per month. Thats a lot of data! But now we can look 
 1. Enough storage to store my video files (40GB) plus the operating system
 2. Enough bandwidth to send 604GB per month
 
-Personally I use [Digital Ocean](https://digitalocean.com) for my cloud provider on personal projects but the same calculations apply across all providers so choose whoever fits the bill! Based on the parameters facts alone, I did some pricing
+I use [Digital Ocean](https://digitalocean.com) for my cloud provider on personal projects but the same calculations apply across all providers so choose whoever fits the bill! Based on the parameters, I did some pricing
 
 ![Digital Ocean Pricing for Regular Droplets](/images/posts/streaming-mp4-to-twitch/digital-ocean-droplets.PNG)
 
@@ -168,7 +168,7 @@ Unfortunately, the results from the code above was less than stellar.
 frame=  128 fps=5.0 q=33.0 size=     735kB time=00:00:05.45 bitrate=1103.1kbits/s speed=0.214x
 ```
 
-The mp4 that I am sending out is 30 FPS, you can see in the output above that the frames per second we are sending out 5.0 and the speed is being calculated as 0.214x because each second we are processing only 1/5th the rate we need to be in order for it to be in real time. Obviously, this meant the stream was unwatchable. Even increasing the CPU usage to 100% didn't actually change anything.
+You can see in the output above that the speed that we are streaming is 0.214x (the show is 30 fps and we are processing at 5 fps). Because each second we are processing only 1/5th the rate we need to be in order for the show to be in real time, the stream was unwatchable. Even increasing the CPU usage to 100% didn't actually change anything, we were still processing around 5 fps.
 
 You might wonder "Why did the code work before?" Well the CPU on my computer is quite a bit better than the one on the rpi so without changing anything, the resources usage to process these files would be the same and the rpi just cant do the same throughput as my desktop CPU.
 
@@ -197,7 +197,7 @@ ffmpeg('video.mp4')
   ])
   .run();
 ```
-But problems began to arise when trying to stream these videos. Error messages that included `Segmentation fault` and `Incompatible pixel format` began popping up and the goal of this project wasn't to become an FFmpeg debugger but just to get a stream going. I decided these problems were out of my technical scope and so I returned to `libx264`. I tried a lot of various configurations like removing the video codec from the command, changing the `crf` value up and down, removing the `pix_fmt`, and a myriad of other things; FFmpeg has a lot if knobs you can turn in order to get output in just the way you want. I would downscale videos for hours at a time and see good results in the file size. But even after trying to downscale 10 different ways, the rpi still couldn't stream the video at a reasonable rate which meant that I was on the wrong trail and that it wasn't a video size issue at all: there was something else wrong in the FFmpeg configuration. 
+But problems began to arise when trying to stream these videos. Error messages that included `Segmentation fault` and `Incompatible pixel format` began popping up and the goal of this project wasn't to become an FFmpeg debugger but just to get a stream going. I decided these problems were out of my technical scope and so I returned to `libx264`. I tried a lot of various configurations like removing the video codec from the command, changing the `crf` value up and down, removing the `pix_fmt`, and a myriad of other things; FFmpeg has a lot of knobs you can turn in order to get output in just the way you want. I would downscale videos for hours at a time and see good results in the file size. But even after trying to downscale 10 different ways, the rpi still couldn't stream the video at a reasonable rate which meant that I was on the wrong trail and that it wasn't a video size issue at all: there was something else wrong in the FFmpeg configuration. 
 
 A silver lining of this whole process was that I was able to reduce the overall size of the show from 40 GB to 15.7 GB. Using our formula from above, that meant that instead of 604 GB of data per month, it would be about 237 GB per month so the time spent was not worthless. 
 
@@ -245,7 +245,7 @@ rtmp://sea02.contribute.live-video.net/app/{stream_key}`
 ```
 What is the problem with this? Well earlier in the article I touched lightly on rtmp and how it opens a connection for us to send a stream of data. When we send FFmpeg this command, we tell it to open a connection to that Twitch ingest server at the URL we passed to it. Then when the FFmpeg command completes (i.e. when it finishes streaming the video), the stream closes. If we stream the videos in a loop like we did while the code was on WSL, FFmpeg is starting and stopping the stream after every single video which is not the behavior I want. At the very least, I would want the whole show to play before the stream is restarted.
 
-I don't know all the technical details behind FFmpeg but from what I gather, FFmpeg is opening a connection and sending some packets that Twitch interprets as what we could call a "Stream Start" event. Then when FFmpeg finishes sending the video and closes the connection, it sends some packets that Twitch interprets as what we could call a "Stream End" event. Unfortunately I don't know how to intercept these packets or tell FFmpeg to keep the connection open though I bet there is probably aw way to do it. Instead, I thought of two solutions. 
+I don't know all the technical details behind FFmpeg but from what I gather, FFmpeg is opening a connection and sending some packets that Twitch interprets as what we could call a "Stream Start" event. Then when FFmpeg finishes sending the video and closes the connection, it sends some packets that Twitch interprets as what we could call a "Stream End" event. Unfortunately I don't know how to intercept these packets or tell FFmpeg to keep the connection open though I bet there is probably a way to do it. Instead, I thought of two solutions. 
 
 #### The Preferred Way
 
@@ -305,11 +305,11 @@ The second solution was to simply smash all the videos together into one big fil
 ```bash
 ls *.mp4 > filename.txt
 ```
-Then you will need to go into the file and mass edit each one so each line looks like this:
+Then you will need to go into the file and mass edit each line to look similar:
 ```txt
 file '[FILE_PATH]/[FILE_NAME]'
 ```
-so for example it would look something like this
+For example it would look something like this:
 ```txt
 file '/mnt/e/Videos/video1.mp4'
 file '/mnt/e/Videos/video2.mp4'
