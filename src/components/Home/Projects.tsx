@@ -27,7 +27,7 @@ export default function Projects() {
           <div className="mt-20 max-w-lg sm:mx-auto md:max-w-none">
             <div className="grid grid-cols-1 gap-y-16 md:grid-cols-2 md:gap-x-12 md:gap-y-16">
               <div className="flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500 text-white sm:shrink-0">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500 text-white">
                   <BoltIcon />
                 </div>
                 <div className="sm:min-w-0 sm:flex-1">
@@ -40,7 +40,7 @@ export default function Projects() {
                     rewrote an open source package to include typescript support
                     on an HTML plugin syntax tree ecosystem since the previous
                     author was not interested. To date, it is my most downloaded
-                    package on
+                    package on {" "}
                     <Link
                       className="underline text-indigo-500"
                       target="_blank"
@@ -49,7 +49,7 @@ export default function Projects() {
                     >
                       NPM
                     </Link>
-                    and it is listed as a recommended by
+                    {" "}and it is listed as a recommended by{" "}
                     <Link
                       className="underline text-indigo-500"
                       target="_blank"
@@ -58,7 +58,7 @@ export default function Projects() {
                     >
                       Rehype
                     </Link>
-                    . It&apos;s also used by
+                    . It&apos;s also used by{" "}
                     <Link
                       className="underline text-indigo-500"
                       target="_blank"
@@ -67,9 +67,9 @@ export default function Projects() {
                     >
                       NASA
                     </Link>
-                    (Look mom, I&apos;m famous!). Contributing to open source,
+                    {" "}(Look mom, I&apos;m famous!). Contributing to open source,
                     no matter how small, is important and I am proud that
-                    something I wrote could be user by others in any capacity.
+                    something I wrote could be user by others in any capacity.{" "}
                     <Link
                       className="underline text-indigo-500"
                       target="_blank"
@@ -94,7 +94,7 @@ export default function Projects() {
                     of nerds who play 24/7 gave you the beat down of a lifetime?
                     Well those nerds need money to play competitively since
                     prize pools just don&apos;t cut it. This project was a
-                    Next.js frontend for the
+                    Next.js frontend for the{" "}
                     <Link
                       className="underline text-indigo-500"
                       target="_blank"
@@ -103,12 +103,12 @@ export default function Projects() {
                     >
                       Neutral Stack
                     </Link>
-                    backend which let users sign up and vote for the direction
+                    {" "}backend which let users sign up and vote for the direction
                     of the team based on their overall contribution to a
                     crowdfunding initiative. Based on their given amount, users
                     can vote in polls that dictate the direction of the e-sports
                     team, allowing real people to shape the future instead of a
-                    faceless corporation.
+                    faceless corporation.{" "}
                     <Link
                       className="underline text-indigo-500"
                       target="_blank"
@@ -134,7 +134,7 @@ export default function Projects() {
                     a tool for you). This project built with Node.js and mySQL
                     includes poll creation, user voting, and an API that is easy
                     to interact. Now you can explicitly tell people their voice
-                    means less than others&apos;.
+                    means less than others&apos;.{" "}
                     <Link
                       className="underline text-indigo-500"
                       target="_blank"
@@ -160,7 +160,7 @@ export default function Projects() {
                     didn&apos;t enjoy it. Built with Flutter and Firebase,
                     it&apos;s a native mobile application that allows for
                     multiple people to create, keep, and edit lists with other
-                    people.
+                    people.{" "}
                     <Link
                       className="underline text-indigo-500"
                       target="_blank"
