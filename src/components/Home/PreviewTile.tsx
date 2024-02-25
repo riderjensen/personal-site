@@ -23,8 +23,8 @@ export default function PreviewTile({ preview }: Props) {
         />
       </Link>
       <div className="p-8">
-        <p className="text-sm pb-2">{preview.date}</p>
         <p className="font-bold text-lg">{preview.title}</p>
+        <p className="text-sm text-slate-500 pb-2">{preview.date}</p>
         <p className="text-slate-600">{preview.excerpt}</p>
         <p className="pt-2 text-right sm:text-left">
           <Link
