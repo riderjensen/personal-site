@@ -48,7 +48,7 @@ export default function Hero() {
               Rider Jensen
             </h1>
             <p className="mt-6 text-xl leading-8 text-gray-600 sm:text-center">
-              Software engineer. Writer. Tinkerer. Human.
+              Software Engineer (but I do other things too)
             </p>
             <div className="mt-8 flex justify-center">
               <Link
