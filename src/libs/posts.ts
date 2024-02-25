@@ -88,6 +88,7 @@ export async function getPostData(id: string): Promise<Post> {
     title: matterResult.data.title,
     img: `/images/${matterResult.data.img}`,
     alt: matterResult.data.img,
+    excerpt: matterResult.data.excerpt,
   };
 }
 

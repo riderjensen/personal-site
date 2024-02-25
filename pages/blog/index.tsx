@@ -18,21 +18,13 @@ export async function getStaticProps() {
   };
 }
 
-const title = "Blog | Riderjensen.com";
+const title = "Blog";
 const meta =
-  "Rider Jensen's blog where I post all kinds of articles related to my life, technology, and anything that catches my fancy including movies, deep thoughts, and quotes. Maybe even a cooking recipe or two?";
-const metaImage =
-  "https://riderjensen.com/_next/image?url=%2Fimages%2Flogo.png";
+  "My blog where I post all kinds of articles related to my life, technology, and anything that catches my fancy including movies, deep thoughts, and quotes. Maybe even a cooking recipe or two?";
 
 export default function Index({ postData }: Props) {
   return (
-    <BasePage
-      title={title}
-      meta={meta}
-      metaDesc={meta}
-      metaTitle={title}
-      metaImage={metaImage}
-    >
+    <BasePage title={title} meta={meta} metaDesc={meta} metaTitle={title}>
       <article>
         <h1 className="text-center text-3xl p-5">Recent Posts</h1>
         <div className="container mx-auto">

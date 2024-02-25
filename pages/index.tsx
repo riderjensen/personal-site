@@ -24,11 +24,9 @@ export async function getStaticProps() {
   };
 }
 
-const title = "Home | Riderjensen.com";
+const title = "Home";
 const meta =
-  "Rider Jensen's portfolio website. Here I have a brief introduction to who I am, links to my other social media and public code, and my blog where I detail things about my life both technical and non-technical.";
-const metaImage =
-  "https://riderjensen.com/_next/image?url=%2Fimages%2Flogo.png";
+  "My hand crafted portfolio site where I have a brief introduction to who I am, links to my other social media and public code, and my blog where I detail things about my life both technical and non-technical.";
 
 export default function Home({ postPreviews }: Props) {
   return (
@@ -37,7 +35,6 @@ export default function Home({ postPreviews }: Props) {
       meta={meta}
       metaDesc={meta}
       metaTitle={title}
-      metaImage={metaImage}
     >
       <Hero />
       <Projects />

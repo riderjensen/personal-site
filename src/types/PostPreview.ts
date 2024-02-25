@@ -8,6 +8,7 @@ type BasePost = {
 
 export interface Post extends BasePost {
   contentHtml: string;
+  excerpt: string;
 }
 
 export interface PostPreview extends BasePost {

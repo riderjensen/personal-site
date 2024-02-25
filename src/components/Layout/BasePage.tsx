@@ -10,7 +10,6 @@ type Props = {
   meta?: string;
   metaDesc?: string;
   metaTitle?: string;
-  metaImage?: string;
 };
 
 export default function BasePage({
@@ -19,16 +18,18 @@ export default function BasePage({
   meta,
   metaDesc,
   metaTitle,
-  metaImage,
 }: Props) {
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>{title + " - Rider Jensen"}</title>
         {meta && <meta name="description" content={meta} key="desc" />}
         {metaDesc && <meta property="og:description" content={meta} />}
         {metaTitle && <meta property="og:title" content={metaTitle} />}
-        {metaImage && <meta property="og:image" content={metaImage} />}
+        <meta
+          property="og:image"
+          content="https://riderjensen.com/images/logo.png"
+        />
       </Head>
       <div className="flex flex-col h-screen">
         <Menu />

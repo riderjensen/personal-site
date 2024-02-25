@@ -1,11 +1,7 @@
 import React from "react";
 import { parseISO, format } from "date-fns";
 import { BasePage, PreviewTile } from "@components";
-import {
-  getAllPostIds,
-  getPostData,
-  getSortedPostsData,
-} from "../../src/libs/posts";
+import { getAllPostIds, getPostData, getSortedPostsData } from "src/libs/posts";
 import { PostPreview, Post as PostType } from "@types";
 
 type Params = {
@@ -55,7 +51,12 @@ type Props = {
 
 export default function Post({ postData, right, left }: Props) {
   return (
-    <BasePage title={postData.title}>
+    <BasePage
+      title={postData.title}
+      metaTitle={postData.title}
+      meta={postData.excerpt}
+      metaDesc={postData.excerpt}
+    >
       <div className="container mx-auto p-4 lg:px-10">
         <article>
           <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl mb-2">
