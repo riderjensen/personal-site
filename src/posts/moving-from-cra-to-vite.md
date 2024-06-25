@@ -97,23 +97,23 @@ it("renders <Component /> without crashing", async () => {
 With the old tests, I had used used `waitFor` and `act` extensively when dealing with errors and warnings coming out of Jest. 
 
 ```javascript
-  await waitFor(async () => {
-    const title = await screen.findByText("* Required Fields");
-    expect(title).toBeInTheDocument();
-  });
+await waitFor(async () => {
+  const title = await screen.findByText("Hello World");
+  expect(title).toBeInTheDocument();
+});
 ```
 This is a snippet of a test I wrote for a large component that had a lot of nested components. These nested components do large state updates and various api calls before they are ready so I used the above pattern to make sure the component I actually wanted to test was ready. 
 
 When I moved to Vitest, I started getting warnings saying `Warning: The current testing environment is not configured to support act(...)`. This actually lead me down quite a rabbit hole trying to figure out what that output meant. There were a lot of different ways various people on the internet recommended to fix this issue like adding `globalThis.IS_REACT_ACT_ENVIRONMENT = true;` in the setup file or setting `globals: true` in your `vite.config.ts`. But after trying most of the conventional wisdom, the real fix was to just remove both the `act` and `waitFor` from all my tests. Afterwards, all the warnings about act not being supported disappeared. This also changed all my code testing user actions, for example this
 
 ```javascript
-  await act(async () => {
-    await userEvent.click(selector);
-  });
+await act(async () => {
+  await userEvent.click(selector);
+});
 ```
 turns into this
 ```javascript
-  await userEvent.click(selector);
+await userEvent.click(selector);
 ```
 
 It was a simple fix in concept but having to go through each test manually and remove all the code was a lot of work.
@@ -132,8 +132,8 @@ mockUseHook.mockReturnValue(mockData);
 With Vitest, this changes to
 ```javascript
 import { useHook } from "hooks/useHook";
-jest.mock("hooks/useHook");
-vi.mocked(useAuth).mockReturnValue(mockData);
+vi.mock("hooks/useHook");
+vi.mocked(useHook).mockReturnValue(mockData);
 ```
 To me it is much easier to read and makes more sense in my head. I like the `vi.mocked` function and how it reads within my test, it feels very separate and easily understandable at a glance.
 
