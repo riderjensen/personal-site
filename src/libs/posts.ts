@@ -69,7 +69,7 @@ export async function getPostData(id: string): Promise<Post> {
       h3: "text-xl py-4 font-semibold",
       h4: "text-lg py-4 font-semibold",
       a: "underline text-indigo-700",
-      code: "bg-gray-200 rounded-md",
+      code: "bg-gray-200 rounded-md px-1",
       pre: "p-4 bg-gray-200 rounded-lg leading-snug overflow-y-auto",
       img: "m-auto",
       li: "list-decimal ml-8",

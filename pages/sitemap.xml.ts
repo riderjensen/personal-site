@@ -12,6 +12,9 @@ function generateSiteMap(posts: PostPreview[]) {
      <url>
        <loc>https://riderjensen.com/about</loc>
      </url>
+     <url>
+      <loc>https://riderjensen.com/blog</loc>
+    </url>
      ${posts
        .map(({ id, date }) => {
          return `

@@ -56,6 +56,7 @@ export default function Post({ postData, right, left }: Props) {
       metaTitle={postData.title}
       meta={postData.excerpt}
       metaDesc={postData.excerpt}
+      metaImg={postData.img}
     >
       <div className="container mx-auto p-4 lg:px-10">
         <article>
