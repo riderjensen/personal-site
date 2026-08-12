@@ -1,3 +1,66 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Screenplay formatting (see src/posts/eternum.md) */
+.screenplay {
+  font-family: "Courier Prime", "Courier New", Courier, monospace;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  max-width: 44rem;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+  color: #111827;
+}
+.screenplay .sp-titlepage {
+  text-align: center;
+  margin: 4rem 0 6rem;
+}
+.screenplay .sp-title {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.screenplay .sp-heading {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 2em 0 1em;
+}
+.screenplay .sp-action {
+  margin: 1em 0;
+  white-space: pre-wrap;
+}
+.screenplay .sp-character {
+  margin: 1em 0 0 36%;
+  text-transform: uppercase;
+}
+.screenplay .sp-paren {
+  margin: 0 0 0 26%;
+  max-width: 40%;
+}
+.screenplay .sp-dialogue {
+  margin: 0 8% 0 16%;
+}
+.screenplay .sp-transition {
+  text-align: right;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 1em 0;
+}
+@media (max-width: 640px) {
+  .screenplay .sp-character {
+    margin-left: 26%;
+  }
+  .screenplay .sp-paren {
+    margin-left: 18%;
+    max-width: 60%;
+  }
+  .screenplay .sp-dialogue {
+    margin: 0 2% 0 10%;
+  }
+}
